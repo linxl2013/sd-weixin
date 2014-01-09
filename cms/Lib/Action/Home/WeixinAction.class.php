@@ -5,7 +5,7 @@ class WeixinAction extends Action
     private $token;
     private $fun;
     private $data = array();
-    private $my = 'Cycms';
+    private $my = 'cms';
     public function index()
     {
         $this->token = $this->_get('token');
@@ -873,8 +873,8 @@ class WeixinAction extends Action
         @$str = 'http://api.ajaxsns.com/api.php?key=free&appid=0&msg=' . urlencode('歌词' . $name);
         $json = json_decode(file_get_contents($str));
         $str  = str_replace('{br}', "\n", $json->content);
-        $str  = str_replace('mzxing_com', 'Cycms', $str);
-		return str_replace('菲菲', 'Cycms', $str);
+        $str  = str_replace('mzxing_com', 'cms', $str);
+		return str_replace('菲菲', 'cms', $str);
     }
     function yuming($n)
     {
@@ -882,8 +882,8 @@ class WeixinAction extends Action
         @$str = 'http://api.ajaxsns.com/api.php?key=free&appid=0&msg=' . urlencode('域名' . $name);
         $json = json_decode(file_get_contents($str));
         $str  = str_replace('{br}', "\n", $json->content);
-		$str  = str_replace('mzxing_com', 'Cycms', $str);
-		return str_replace('菲菲', 'Cycms', $str);
+		$str  = str_replace('mzxing_com', 'cms', $str);
+		return str_replace('菲菲', 'cms', $str);
     }
     function tianqi($n)
     {
@@ -891,7 +891,7 @@ class WeixinAction extends Action
         @$str = 'http://api.ajaxsns.com/api.php?key=free&appid=0&msg=' . urlencode('天气' . $name);
         $json = json_decode(file_get_contents($str));
         $str  = str_replace('{br}', "\n", $json->content);
-        return str_replace('菲菲', 'Cycms', $str);
+        return str_replace('菲菲', 'cms', $str);
     }
     function shouji($n)
     {
@@ -900,7 +900,7 @@ class WeixinAction extends Action
         $json = json_decode(file_get_contents($str));
         $str  = str_replace('{br}', "\n", $json->content);
         $str  = str_replace('菲菲', $this->my, str_replace('提示：', $this->my . '提醒您:', str_replace('{br}', "\n", $str)));
-		return str_replace('菲菲', 'Cycms', $str);
+		return str_replace('菲菲', 'cms', $str);
     }
     function shenfenzheng($n)
     {
@@ -1045,8 +1045,8 @@ class WeixinAction extends Action
         @$str = 'http://api.ajaxsns.com/api.php?key=free&appid=0&msg=' . urlencode('笑话' . $name);
         $json = json_decode(file_get_contents($str));
         $str  = str_replace('{br}', "\n", $json->content);
-        $str  = str_replace('mzxing_com', 'Cycms', $str);
-		return str_replace('菲菲', 'Cycms', $str);
+        $str  = str_replace('mzxing_com', 'cms', $str);
+		return str_replace('菲菲', 'cms', $str);
     }
     function liaotian($name)
     {
@@ -1063,17 +1063,17 @@ class WeixinAction extends Action
         if ($name == "你叫什么" || $name == "你是谁") {
             return '咳咳，我是聪明与智慧并存的美女，主淫你可以叫我' . $this->my . ',人家刚交男朋友,你不可追我啦';
         } elseif ($name == "你父母是谁" || $name == "你爸爸是谁" || $name == "你妈妈是谁") {
-            return '主淫,' . $this->my . '是Cycms创造的,所以他们是我的父母,不过主人我属于你的';
+            return '主淫,' . $this->my . '是cms创造的,所以他们是我的父母,不过主人我属于你的';
         } elseif ($name == '糗事') {
             $name = '笑话';
         } elseif ($name == '网站' || $name == '官网' || $name == '网址' || $name == '3g网址') {
-            return "【Cycms官网网址】\wx.tzcy.net\n【Cycms服务理念】\n化繁为简,让菜鸟也能使用强大的系统!";
+            return "【cms官网网址】\wx.shunda365.com\n【cms服务理念】\n化繁为简,让菜鸟也能使用强大的系统!";
         }
         $str  = 'http://api.ajaxsns.com/api.php?key=free&appid=0&msg=' . urlencode($name);
         $json = json_decode(file_get_contents($str));
         $str  = str_replace('菲菲', $this->my, str_replace('提示：', $this->my . '提醒您:', str_replace('{br}', "\n", $json->content)));
-		$str  = str_replace('mzxing_com', 'Cycms', $str);
-		return str_replace('菲菲', 'Cycms', $str);
+		$str  = str_replace('mzxing_com', 'cms', $str);
+		return str_replace('菲菲', 'cms', $str);
     }
     public function fistMe($data)
     {
@@ -1146,7 +1146,7 @@ class WeixinAction extends Action
     function baike($name)
     {
         $name = implode('', $name);
-        if ($name == 'Cycms') {
+        if ($name == 'cms') {
             return '世界上最牛B的微信营销系统，两天前被腾讯收购，当然这只是一个笑话';
         }
         $name_gbk         = iconv('utf-8', 'gbk', $name);

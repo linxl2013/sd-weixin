@@ -3,16 +3,16 @@
 <head>
 	<title>权限设置</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel='stylesheet' type='text/css' href='{Cycms::STATICS}/treetable/admin_style.css' />
-	<script type="text/javascript" src="{Cycms::STATICS}/jquery.min.js"></script>
-	<script type="text/javascript" src="{Cycms::STATICS}/treetable/jquery.treetable.js"></script>
-	<link rel='stylesheet' type='text/css' href='{Cycms::STATICS}/treetable/css/jquery.treeTable.css' />
+	<link rel='stylesheet' type='text/css' href='{cms::STATICS}/treetable/admin_style.css' />
+	<script type="text/javascript" src="{cms::STATICS}/jquery.min.js"></script>
+	<script type="text/javascript" src="{cms::STATICS}/treetable/jquery.treetable.js"></script>
+	<link rel='stylesheet' type='text/css' href='{cms::STATICS}/treetable/css/jquery.treeTable.css' />
 </head>
 <body>
-	<form action="{Cycms::U('Group/access_edit')}" method="POST">
-		<input type="hidden" name="roleid" value="{Cycms:$Think.get.roleid}" />
+	<form action="{cms::U('Group/access_edit')}" method="POST">
+		<input type="hidden" name="roleid" value="{cms:$Think.get.roleid}" />
 		<table id="tree" width="100%" border="0" cellpadding="4" cellspacing="1" class="table">
-			{Cycms:$html_tree}
+			{cms:$html_tree}
 			<tr class="tr lt">
 				<td>
 					<input class="bginput" type="submit" name="dosubmit" value="提 交" ></td>

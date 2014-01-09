@@ -1,9 +1,9 @@
 <include file="Public:head"/> 
-				<link rel="stylesheet" type="text/css" href="{Cycms::RES}/css/cymain.css" />
+				<link rel="stylesheet" type="text/css" href="{cms::RES}/css/cymain.css" />
 				<div class="content">
 <div class="cLineB">
-<h4>“{Cycms:$thisForm['name']}”表单输入项管理 </h4>
-<a href="{Cycms::U('Selfform/index',array('token'=>$token))}" class="right  btnGreen" style="margin-top:-27px">返回</a> 
+<h4>“{cms:$thisForm['name']}”表单输入项管理 </h4>
+<a href="{cms::U('Selfform/index',array('token'=>$token))}" class="right  btnGreen" style="margin-top:-27px">返回</a> 
 <div class="searchbar right">
 
 </div>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="cLine">
-<div class="pageNavigator left"> <a href="{Cycms::U('Selfform/inputAdd',array('token'=>$token,'formid'=>$thisForm['id']))}" title="添加" class="btnGrayS vm bigbtn"><img src="{Cycms::RES}/images/product/add.png" width="16" class="vm">添加</a></div>
+<div class="pageNavigator left"> <a href="{cms::U('Selfform/inputAdd',array('token'=>$token,'formid'=>$thisForm['id']))}" title="添加" class="btnGrayS vm bigbtn"><img src="{cms::RES}/images/product/add.png" width="16" class="vm">添加</a></div>
 <div class="clr"></div>
 </div>
 <div class="msgWrap">
@@ -31,10 +31,10 @@
 <tr></tr>
 <volist name="list" id="item"> 
 <tr>
-<td>{Cycms:$item.displayname}</td>
-<td>{Cycms:$item.fieldname}</td>
-<td>{Cycms:$item.inputtype}</td>
-<td class="norightborder"><a href="{Cycms::U('Selfform/inputSet',array('id'=>$item['id'],'token'=>$token))}">修改</a>&nbsp;&nbsp;<a href="javascript:drop_confirm('您确定要删除吗?', '{Cycms::U('Selfform/inputDelete',array('id'=>$item['id'],'token'=>$token))}');">删除</a></td>
+<td>{cms:$item.displayname}</td>
+<td>{cms:$item.fieldname}</td>
+<td>{cms:$item.inputtype}</td>
+<td class="norightborder"><a href="{cms::U('Selfform/inputSet',array('id'=>$item['id'],'token'=>$token))}">修改</a>&nbsp;&nbsp;<a href="javascript:drop_confirm('您确定要删除吗?', '{cms::U('Selfform/inputDelete',array('id'=>$item['id'],'token'=>$token))}');">删除</a></td>
 </tr>
 </volist>
 </tbody>
@@ -44,7 +44,7 @@
 </div>
 					<div class="cLine">
 						<div class="pageNavigator right">
-							<div class="pages">{Cycms:$page}</div>
+							<div class="pages">{cms:$page}</div>
 						</div>
 						<div class="clr"></div>
 					</div>

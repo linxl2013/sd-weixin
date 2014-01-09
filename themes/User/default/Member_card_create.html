@@ -14,7 +14,7 @@ function selectall(name) {
 	}
 }
 </script> 
-<link rel="stylesheet" type="text/css" href="{Cycms::RES}/css/cymain.css" />
+<link rel="stylesheet" type="text/css" href="{cms::RES}/css/cymain.css" />
 <div class="content">
          
           <div class="cLineB">
@@ -26,8 +26,8 @@ function selectall(name) {
           <div class="cLine">
 			<div class="pageNavigator left">
 			
-				<a href="{Cycms::U('Member_card/create_add',array('token'=>$token))}" title="创建会员卡号" class="add">创建会员卡号
-				</a>&nbsp;&nbsp;<a class="delete" href="###" onclick="if(confirm('确定删除吗')){$('#info').submit()}">删除</a>&nbsp;&nbsp; <strong>已经领取 <span style="color:red">{Cycms:$usecount}</span> 张，剩余<span style="color:red">{Cycms:$ucount}</span>张未领取，一共 <span style="color:red">{Cycms:$count}</span>张</strong>
+				<a href="{cms::U('Member_card/create_add',array('token'=>$token))}" title="创建会员卡号" class="add">创建会员卡号
+				</a>&nbsp;&nbsp;<a class="delete" href="###" onclick="if(confirm('确定删除吗')){$('#info').submit()}">删除</a>&nbsp;&nbsp; <strong>已经领取 <span style="color:red">{cms:$usecount}</span> 张，剩余<span style="color:red">{cms:$ucount}</span>张未领取，一共 <span style="color:red">{cms:$count}</span>张</strong>
 			</div>
 			<a href="javascript:history.go(-1);" class="right btnGrayS vm" style="margin-top:10px">返回</a>          
 			<div class="clr"></div>
@@ -48,9 +48,9 @@ function selectall(name) {
               <tbody>
                 <volist name="data_vip" id="data_vip">           
                 <tr>
-					  <td><input type="checkbox" value="{Cycms:$data_vip.id}" class="cbitem" name="id_{Cycms:$i}"></td>
+					  <td><input type="checkbox" value="{cms:$data_vip.id}" class="cbitem" name="id_{cms:$i}"></td>
 
-					  <td><div class="answer_text">{Cycms:$data_vip.number}</div></td>
+					  <td><div class="answer_text">{cms:$data_vip.number}</div></td>
 					 
 					  <td class="norightborder">
 						<!--a href="">使用统计</a--> 
@@ -59,7 +59,7 @@ function selectall(name) {
                       <td> 
                       <if condition="$data_vip['wecha_id'] neq false">
                             
-                    <a href="index.php?g=User&m=Member_card&a=getuserinfo&id={Cycms:$data_vip.wecha_id}">查看详情</a>
+                    <a href="index.php?g=User&m=Member_card&a=getuserinfo&id={cms:$data_vip.wecha_id}">查看详情</a>
                        
                       </if>
                     
@@ -90,7 +90,7 @@ function selectall(name) {
           </div>
           <div class="cLine">
             <div class="pageNavigator right">
-                 <div class="pages">{Cycms:$page}</div>
+                 <div class="pages">{cms:$page}</div>
              </div>
             <div class="clr"></div>
           </div>

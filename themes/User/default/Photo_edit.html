@@ -16,7 +16,7 @@ box-shadow:0 0px 5px 0 rgba(0, 0, 0, 0.25);
 -webkit-border-radius:5px 5px 10px 10px;
 -moz-border-radius:5px 5px 10px 10px;
 border-radius:5px 5px 10px 10px;
-background: url({Cycms::RES}/images/photo/bottom.png) repeat-x scroll left bottom #FFFFFF;
+background: url({cms::RES}/images/photo/bottom.png) repeat-x scroll left bottom #FFFFFF;
 background-size:2px auto;
 }
 .chatPanel .media .mediaHead .title {
@@ -67,7 +67,7 @@ padding: 0 0 5px;
             <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody>
 <tr>
 <th valign="top"><span class="red">*</span>相册名称：</th>
-<td width="430"><input type="text" name="title" value="{Cycms:$photo.title}" class="px" style="width:400px;" id="name" onkeyup="DivFollowingText1()">
+<td width="430"><input type="text" name="title" value="{cms:$photo.title}" class="px" style="width:400px;" id="name" onkeyup="DivFollowingText1()">
 <script type="text/javascript">
 function DivFollowingText1()
 {
@@ -86,11 +86,11 @@ document.getElementById("zname2").innerHTML=document.getElementById("name").valu
 <div class="media mediaFullText">
 
 <div class="mediaPanel">
-<div class="mediaHead"><span class="title" id="zname">{Cycms:$photo.title}</span>
+<div class="mediaHead"><span class="title" id="zname">{cms:$photo.title}</span>
 </div>
-<div class="mediaImg"><img id="zpic" src="{Cycms:$photo.picurl}"></div>
+<div class="mediaImg"><img id="zpic" src="{cms:$photo.picurl}"></div>
 <div class="mediaContent mediaContentP">
-<p id="zinfo">{Cycms:$photo.info}</p>
+<p id="zinfo">{cms:$photo.info}</p>
 </div>
 <div class="mediaFooter">
 <span class="mesgIcon right"></span><span style="line-height:50px;" class="left">查看全文</span>
@@ -109,10 +109,10 @@ document.getElementById("zname2").innerHTML=document.getElementById("name").valu
 <div class="mediaPanel">
 <div class="mediaHead" style="padding: 10px 10px 0px;">
 </div>
-<div class="mediaImg"><img id="zpic2" src="{Cycms:$photo.picurl}"/></div>
+<div class="mediaImg"><img id="zpic2" src="{cms:$photo.picurl}"/></div>
 <div class="mediaFooter">
 <span class="mesgIcon right"></span>
-<span style="line-height:50px; font-size:16px" id="zname2">{Cycms:$photo.title}</span>
+<span style="line-height:50px; font-size:16px" id="zname2">{cms:$photo.title}</span>
 <div class="clr"></div>
 </div>
 </div>
@@ -125,15 +125,15 @@ document.getElementById("zname2").innerHTML=document.getElementById("name").valu
 
 </tr>
 <tr>
-<th valign="top"><span class="red">*</span>相册封面图：</th><input type="hidden" name="id" value="{Cycms:$photo.id}" />
-<td width="430"><input type="text" name="picurl" value="{Cycms:$photo.picurl}" class="px" style="width:400px;" id="pic" onblur="document.getElementById('zpic').src=document.getElementById('pic').value;document.getElementById('zpic2').src=document.getElementById('pic').value;">
+<th valign="top"><span class="red">*</span>相册封面图：</th><input type="hidden" name="id" value="{cms:$photo.id}" />
+<td width="430"><input type="text" name="picurl" value="{cms:$photo.picurl}" class="px" style="width:400px;" id="pic" onblur="document.getElementById('zpic').src=document.getElementById('pic').value;document.getElementById('zpic2').src=document.getElementById('pic').value;">
 <br>									
-外链图片地址，尺寸720×400.<input style="font-size:12px;color:red"type=button onclick="window.open('{Cycms::U('Upload/index',array('token'=>$token,'n'=>picurl))}')" value="点击上传图片"></td>
+外链图片地址，尺寸720×400.<input style="font-size:12px;color:red"type=button onclick="window.open('{cms::U('Upload/index',array('token'=>$token,'n'=>picurl))}')" value="点击上传图片"></td>
 </tr>
 <tr>
    <th valign="top">相册介绍：</th>
 	<td valign="top">
-		<textarea class="px" id="info" name="info" style="width:400px; height:120px" onkeyup="DivFollowingText2()">{Cycms:$photo.info}</textarea><br>
+		<textarea class="px" id="info" name="info" style="width:400px; height:120px" onkeyup="DivFollowingText2()">{cms:$photo.info}</textarea><br>
 			<script type="text/javascript">
 			function DivFollowingText2()
 			{

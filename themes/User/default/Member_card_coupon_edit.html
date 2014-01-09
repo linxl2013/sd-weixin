@@ -19,7 +19,7 @@ items : [
 });
 });
 </script>
-<script src="{Cycms::RES}/js/date/WdatePicker.js"></script>
+<script src="{cms::RES}/js/date/WdatePicker.js"></script>
 <div class="content">
           <div class="cLineB"><h4>发布优惠券 <span class="FAQ">发布现金抵用券和打折优惠券信息</span></h4><a href="javascript:history.go(-1);" class="right btnGrayS vm" style="margin-top:-27px">返回</a></div>
          
@@ -29,7 +29,7 @@ items : [
               <tbody>
   <tr>
               		<th>券名称：</th>
-              		<td><input type="input" class="px" id="title" value="{Cycms:$vip.title}" name="title" style="width:400px;"> </td>
+              		<td><input type="input" class="px" id="title" value="{cms:$vip.title}" name="title" style="width:400px;"> </td>
               		</tr>
   <tr>
               		<th >选择人群：</th>
@@ -47,8 +47,8 @@ items : [
               	<tr>
 <th>有效期：</th>
 <td>
-	<input type="input" class="px" id="statdate" value="{Cycms:$vip.statdate|date='Y-m-d',###}" onClick="WdatePicker()" name="statdate"> （含）到
-	<input type="input" class="px" id="enddate" value="{Cycms:$vip.enddate|date='Y-m-d',###}" name="enddate" onClick="WdatePicker()">（含）
+	<input type="input" class="px" id="statdate" value="{cms:$vip.statdate|date='Y-m-d',###}" onClick="WdatePicker()" name="statdate"> （含）到
+	<input type="input" class="px" id="enddate" value="{cms:$vip.enddate|date='Y-m-d',###}" name="enddate" onClick="WdatePicker()">（含）
 </td>
 </tr>
 <tr>
@@ -61,7 +61,7 @@ items : [
 	<input name="type" <if  condition="$vip['type'] eq false">checked="checked"</if>  type="radio" id="RadioGroup1_0" onclick="document.getElementById('cktime').style.display='';;" value="0">
 	现金抵用券
   </label>
-<span id="cktime" <if  condition="$vip['type'] neq false">style="display:none"</if>>（抵用金额：<input type="input" class="px"  value="{Cycms:$vip.price}" name="price" style="width:50px;"> 元）</span>
+<span id="cktime" <if  condition="$vip['type'] neq false">style="display:none"</if>>（抵用金额：<input type="input" class="px"  value="{cms:$vip.price}" name="price" style="width:50px;"> 元）</span>
 　
 </td>
 </tr>
@@ -69,12 +69,12 @@ items : [
 <tr>
 	<th valign="top">使用说明：</th>
 	<td>
-		<textarea name="info" id="info" rows="5" style="width: 410px; height: 250px; display: none;">{Cycms:$vip.info}</textarea>
+		<textarea name="info" id="info" rows="5" style="width: 410px; height: 250px; display: none;">{cms:$vip.info}</textarea>
 	</td>
 </tr>  
 <tr>
 <th>数量：</th>
-<td>每个用户可以获得：<input type="input" class="px" id="people" value="{Cycms:$vip.people}" name="people" style="width:50px;"> 张券</td>
+<td>每个用户可以获得：<input type="input" class="px" id="people" value="{cms:$vip.people}" name="people" style="width:50px;"> 张券</td>
 </tr>
 <tr>
 	<th></th>

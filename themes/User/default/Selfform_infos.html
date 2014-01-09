@@ -1,8 +1,8 @@
 <include file="Public:head"/> 
-				<link rel="stylesheet" type="text/css" href="{Cycms::RES}/css/cymain.css" />
+				<link rel="stylesheet" type="text/css" href="{cms::RES}/css/cymain.css" />
 				<div class="content">
 <div class="cLineB">
-<h4>“{Cycms:$thisForm.name}”信息列表 <if condition="$page">({Cycms:$page})</if> &nbsp;&nbsp;&nbsp;&nbsp;<a href="{Cycms::U('Selfform/index',array('token'=>$token))}">返回</a> </h4>
+<h4>“{cms:$thisForm.name}”信息列表 <if condition="$page">({cms:$page})</if> &nbsp;&nbsp;&nbsp;&nbsp;<a href="{cms::U('Selfform/index',array('token'=>$token))}">返回</a> </h4>
 
 <div class="searchbar right">
 <form method="post" action="">
@@ -29,7 +29,7 @@
 <th width="40">ID</th>
 <th width="120">时间</th>
 <volist name="fields" id="item">
-<th>{Cycms:$item.displayname}</th>
+<th>{cms:$item.displayname}</th>
 </volist>
 <th width="30" class="norightborder">操作</th>
 </tr>
@@ -39,9 +39,9 @@
 <volist name="list" id="item"> 
 <tr>
 <volist name="item" id="citem">
-<td>{Cycms:$citem}</td>
+<td>{cms:$citem}</td>
 </volist>
-<td class="norightborder"><a href="javascript:drop_confirm('您确定要删除吗?', '{Cycms::U('Selfform/infoDelete',array('id'=>$item['id'],'token'=>$token))}');">删除</a></td>
+<td class="norightborder"><a href="javascript:drop_confirm('您确定要删除吗?', '{cms::U('Selfform/infoDelete',array('id'=>$item['id'],'token'=>$token))}');">删除</a></td>
 </tr>
 </volist>
 </tbody>
@@ -51,7 +51,7 @@
 </div>
 					<div class="cLine">
 						<div class="pageNavigator right">
-							<div class="pages">{Cycms:$page}</div>
+							<div class="pages">{cms:$page}</div>
 						</div>
 						<div class="clr"></div>
 					</div>

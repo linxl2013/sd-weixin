@@ -4,6 +4,6 @@ return array(
 
 	'TMPL_FILE_DEPR'=>'_',
 
-	'DEFAULT_THEME'=>'Cycms',
+	'DEFAULT_THEME'=>'cms',
 
 );

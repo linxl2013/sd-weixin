@@ -10,12 +10,12 @@ if (get_magic_quotes_gpc()) {
 	$_COOKIE = array_map('stripslashes_deep', $_COOKIE); 
 }
 define('APP_DEBUG',true);
-define('APP_NAME', 'Cycms');
-define('CONF_PATH','./Cycmsdata/conf/');
-define('RUNTIME_PATH','./Cycmsdata/logs/');
+define('APP_NAME', 'cms');
+define('CONF_PATH','./cmsdata/conf/');
+define('RUNTIME_PATH','./cmsdata/logs/');
 define('TMPL_PATH','./themes/');
-define('HTML_PATH','./Cycmsdata/html/');
-define('APP_PATH','./Cycms/');
-define('CORE','./Cycms/_Core');
-require(CORE.'/Cycms.php');
+define('HTML_PATH','./cmsdata/html/');
+define('APP_PATH','./cms/');
+define('CORE','./cms/_Core');
+require(CORE.'/cms.php');
 ?>

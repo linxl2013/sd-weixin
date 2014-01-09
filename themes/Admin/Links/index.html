@@ -15,19 +15,19 @@
 	  </tr>
 	    <volist name="info" id="vo">
 			<tr>
-				<td align='center'>{Cycms:$vo.id}</td>
-				<td >{Cycms:$vo.name}</td>
-				<td >{Cycms:$vo.url}</td>
+				<td align='center'>{cms:$vo.id}</td>
+				<td >{cms:$vo.name}</td>
+				<td >{cms:$vo.url}</td>
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{Cycms::U('Links/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <a href="{Cycms::U('Links/del/',array('id'=>$vo['id']))}">删除</a>
+					<a href="{cms::U('Links/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <a href="{cms::U('Links/del/',array('id'=>$vo['id']))}">删除</a>
 				</td>
 			</tr>
 	    </volist>
      <tr bgcolor="#FFFFFF"> 
-      <td colspan="8"><div class="listpage">{Cycms:$page}</div></td>
+      <td colspan="8"><div class="listpage">{cms:$page}</div></td>
     </tr>
    
 </table>

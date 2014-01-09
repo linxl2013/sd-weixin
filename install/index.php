@@ -162,7 +162,7 @@ $env_items = array(
 'diskspace' => array('r' => '2G', 'b' => 'notset'),
 );
 $dirfile_items = array(
-    'conf' => array('type' => 'file', 'path' => './Cycmsdata/conf/db.php'),
+    'conf' => array('type' => 'file', 'path' => './cmsdata/conf/db.php'),
 );
 
 $form_app_reg_items = array(
@@ -316,7 +316,7 @@ if($method == 'show_license') {//声明
 			$db = new dbstuff;
 			$db->connect($dbhost.":".$dbport, $dbuser, $dbpw, $dbname, DBCHARSET);
 
-			$sqlfile = 'sql/Cycms_db.sql';
+			$sqlfile = 'sql/cms_db.sql';
 			$sql = file_get_contents($sqlfile);
 			$sql = str_replace("\r\n", "\n", $sql);
 			show_install();
@@ -352,7 +352,7 @@ if($method == 'show_license') {//声明
 	$dbname = 'web_cms';
 	$dbuser = 'root';
 	$dbpw = '123456';
-	$tablepre = 'Cycms_';
+	$tablepre = 'cms_';
 	$dbport = '3306';
 	$fanli_name = '微信营销平台演示站';
 	show_form($form_db_init_items, $error_msg);
@@ -885,7 +885,7 @@ function check_db($dbhost, $dbuser, $dbpw, $dbname, $tablepre, $dbport) {
 //写入config文件
 function config_edit() {
 	extract($GLOBALS, EXTR_SKIP);
-	$config = '../Cycmsdata/conf/db.php';
+	$config = '../cmsdata/conf/db.php';
 	$configfile = include($config);
 	$configfile['DB_TYPE']='mysql';
 	$configfile['DB_HOST']=$dbhost;
@@ -907,7 +907,7 @@ function runquery($sql) {
 
 	if(!isset($sql) || empty($sql)) return;
 
-	$sql = str_replace("\r", "\n", str_replace('Cycms_', $tablepre, $sql));
+	$sql = str_replace("\r", "\n", str_replace('cms_', $tablepre, $sql));
 	$ret = array();
 	$num = 0;
 	foreach(explode(";\n", trim($sql)) as $query) {

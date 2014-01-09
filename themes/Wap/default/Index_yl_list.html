@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>{Cycms:$tpl.wxname}</title>
+<title>{cms:$tpl.wxname}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta charset="utf-8">
-<link href="{Cycms::RES}/css/yl/news.css" rel="stylesheet" type="text/css" />
+<link href="{cms::RES}/css/yl/news.css" rel="stylesheet" type="text/css" />
 </head>
 <script>
 window.onload = function ()
@@ -34,14 +34,14 @@ oWin.style.display = "none"
 <div class="fixed">
 <a class="ui-title" id="popmenu">选择分类</a>
 <a class="ui-btn-left_pre" href="javascript:history.go(-1)"></a>
-<a class="ui-btn-right" href="{Cycms::U('Index/index',array('token'=>$tpl['token']))}"></a>
+<a class="ui-btn-right" href="{cms::U('Index/index',array('token'=>$tpl['token']))}"></a>
 </div>
 </div>
 <div id="overlay"></div>
 <div id="win">
 <ul class="dropdown"> 
 <volist name="info" id="vo">
-<li><a href="{Cycms::U('Index/lists',array('classid'=>$vo['id'],'token'=>$vo['token']))}"><span>{Cycms:$vo.name}</span></a></li>
+<li><a href="{cms::U('Index/lists',array('classid'=>$vo['id'],'token'=>$vo['token']))}"><span>{cms:$vo.name}</span></a></li>
 </volist> 	
 <div class="clr"></div>
 </ul>
@@ -53,13 +53,13 @@ oWin.style.display = "none"
    <volist name="res" id="so">   
 <li>
 <if condition="$so['url']">
-<a href="{Cycms:$so.url}">
+<a href="{cms:$so.url}">
 <else />
-<a href="{Cycms::U('Index/content',array('id'=>$so['id'],'token'=>$so['token']))}">
+<a href="{cms::U('Index/content',array('id'=>$so['id'],'token'=>$so['token']))}">
 </if>
-<div class="img"><eq name="so.showpic" value="1"><img src="{Cycms:$so.pic}"></eq></div>
-<h2>{Cycms:$so.title}</h2>
-<p class="onlyheight">{Cycms:$so.text}</p>
+<div class="img"><eq name="so.showpic" value="1"><img src="{cms:$so.pic}"></eq></div>
+<h2>{cms:$so.title}</h2>
+<p class="onlyheight">{cms:$so.text}</p>
 <div class="commentNum"></div>
 </a>
 </li>
@@ -70,10 +70,10 @@ oWin.style.display = "none"
 <section id="Page_wrapper">
 <div id="pNavDemo" class="c-pnav-con">
 <section class="c-p-sec">
-<div class='c-p-pre <eq name="p" value="1"> c-p-grey </eq> '><span class="c-p-p"><em></em></span><a <eq name="p" value="1"><else/>href="{Cycms::C('site_url')}/index.php?g=Wap&m=Index&a=lists&classid=<php>echo $_GET['classid'];</php>&token={Cycms:$tpl.token}&p=<php>echo $p-1;</php>"</eq>  >上一页</a></div>
+<div class='c-p-pre <eq name="p" value="1"> c-p-grey </eq> '><span class="c-p-p"><em></em></span><a <eq name="p" value="1"><else/>href="{cms::C('site_url')}/index.php?g=Wap&m=Index&a=lists&classid=<php>echo $_GET['classid'];</php>&token={cms:$tpl.token}&p=<php>echo $p-1;</php>"</eq>  >上一页</a></div>
 <div class="c-p-cur">
-<div class="c-p-arrow c-p-down"><span>{Cycms:$p}/{Cycms:$page}</span><span></span></div>
-	<select class="c-p-select" onchange="dourl('{Cycms::C('site_url')}/index.php?g=Wap&m=Index&a=lists&classid=<php>echo $_GET['classid'];</php>&token={Cycms:$tpl.token}&p='+this.value)">
+<div class="c-p-arrow c-p-down"><span>{cms:$p}/{cms:$page}</span><span></span></div>
+	<select class="c-p-select" onchange="dourl('{cms::C('site_url')}/index.php?g=Wap&m=Index&a=lists&classid=<php>echo $_GET['classid'];</php>&token={cms:$tpl.token}&p='+this.value)">
 		<?php
 			for($i=1;$i<=$page;$i++){
 				if($i==$p){
@@ -110,6 +110,6 @@ location.href= url;
 }
 </script>
 <div style="display:none"> </div>
-<div style="display:none">{Cycms:$tpl.tongji|htmlspecialchars_decode}</div>
+<div style="display:none">{cms:$tpl.tongji|htmlspecialchars_decode}</div>
 </body>
 </html>

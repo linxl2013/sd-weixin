@@ -7,7 +7,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="">
 <title>消费记录</title>
-<link href="{Cycms::RES}/css/guajiang/css/activity-style.css" rel="stylesheet" type="text/css">
+<link href="{cms::RES}/css/guajiang/css/activity-style.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 #txt {
   color: #000000;
@@ -58,9 +58,9 @@ Unknown property name.-ms-filter: progid:DXImageTransform.Microsoft.gradient(Gra
 <div class="main">
 <div class="cover">
  <if condition="$cardset['shopping'] neq false">
-   <img src="{Cycms::$cardset['shopping']}">
+   <img src="{cms::$cardset['shopping']}">
  <else/>
-   <img src="{Cycms::RES}/images/cart_info/shopping.jpg">
+   <img src="{cms::RES}/images/cart_info/shopping.jpg">
  </if>
 
 </div>
@@ -78,9 +78,9 @@ Unknown property name.-ms-filter: progid:DXImageTransform.Microsoft.gradient(Gra
         </thead>
         <tbody>
           <tr align="middle">
-            <td>{Cycms:$userinfo['total_score']}</td>
-            <td>{Cycms:$userinfo['sign_score']}</td>
-            <td>{Cycms:$userinfo['expend_score']}</td>
+            <td>{cms:$userinfo['total_score']}</td>
+            <td>{cms:$userinfo['sign_score']}</td>
+            <td>{cms:$userinfo['expend_score']}</td>
           </tr>
         </tbody>
       </table>
@@ -101,9 +101,9 @@ Unknown property name.-ms-filter: progid:DXImageTransform.Microsoft.gradient(Gra
         <tbody>
           <volist name="sign" id="list"> 
             <tr align="middle">
-              <td><if condition="$list.sign_time neq false">{Cycms:$list.sign_time|date="Y-m-d",###}<else/>无</if></td>
-              <td>{Cycms:$list.sell_expense} 元</td>
-              <td>+ {Cycms:$list.expense}</td>
+              <td><if condition="$list.sign_time neq false">{cms:$list.sign_time|date="Y-m-d",###}<else/>无</if></td>
+              <td>{cms:$list.sell_expense} 元</td>
+              <td>+ {cms:$list.expense}</td>
             </tr>
           </volist>
         </tbody>
@@ -111,8 +111,8 @@ Unknown property name.-ms-filter: progid:DXImageTransform.Microsoft.gradient(Gra
         <tbody>           
             <tr align="middle">
               <td>本月</td>
-              <td>{Cycms:$list.sell_expense} 元</td>
-              <td>+ {Cycms:$list.expense}</td>
+              <td>{cms:$list.sell_expense} 元</td>
+              <td>+ {cms:$list.expense}</td>
             </tr>          
         </tbody>
         -->
@@ -126,7 +126,7 @@ Unknown property name.-ms-filter: progid:DXImageTransform.Microsoft.gradient(Gra
 </div>  
 
 <div style="height:20px;"></div>
-<div class="footFix" id="footReturn"><a href="javascript:void(0)" onClick="location.href='{Cycms::U('Wap/Index/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';"><span>返回3G网站</span></a></div>
+<div class="footFix" id="footReturn"><a href="javascript:void(0)" onClick="location.href='{cms::U('Wap/Index/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';"><span>返回3G网站</span></a></div>
 
  
 </body></html>

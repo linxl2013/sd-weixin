@@ -17,9 +17,9 @@ $(function() {
               
                             </div>
             <div class="u_text">
-                <h2>{Cycms:$o.time|date="Y-m-d H:i:s",###}</h2>
-                <p class="u_color1">数量：<font class="org">{Cycms:$o.total}</font>  总价： <font class="org">￥{Cycms:$o.price}</font></p>
-                                <p><span class="u_mt5">订购人：{Cycms:$o.truename}</span> <a class="u_btn ts1" href="{Cycms::U('Product/updateOrder',array('token'=>$token,'id'=>$o['id'],'wecha_id'=>$wecha_id))}" style="margin-left:10px;display:">查看</a> <if condition="$o.handled eq 0"><a class="u_btn ts1" href="{Cycms::U('Product/deleteOrder',array('token'=>$token,'id'=>$o['id'],'wecha_id'=>$wecha_id))}">删除</a></if></p>
+                <h2>{cms:$o.time|date="Y-m-d H:i:s",###}</h2>
+                <p class="u_color1">数量：<font class="org">{cms:$o.total}</font>  总价： <font class="org">￥{cms:$o.price}</font></p>
+                                <p><span class="u_mt5">订购人：{cms:$o.truename}</span> <a class="u_btn ts1" href="{cms::U('Product/updateOrder',array('token'=>$token,'id'=>$o['id'],'wecha_id'=>$wecha_id))}" style="margin-left:10px;display:">查看</a> <if condition="$o.handled eq 0"><a class="u_btn ts1" href="{cms::U('Product/deleteOrder',array('token'=>$token,'id'=>$o['id'],'wecha_id'=>$wecha_id))}">删除</a></if></p>
                             </div>
         </li>
          </volist>

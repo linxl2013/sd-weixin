@@ -1,12 +1,12 @@
  <include file="Public:head" /> 
- <link rel="stylesheet" type="text/css" href="{Cycms::RES}/css/cymain.css" />
- <link rel="stylesheet" href="{Cycms::STATICS}/kindeditor/themes/default/default.css" />
-<link rel="stylesheet" href="{Cycms::STATICS}/kindeditor/plugins/code/prettify.css" />
-<script src="{Cycms::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
-<script src="{Cycms::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
-<script src="{Cycms::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
-<script src="{Cycms::RES}/js/date/WdatePicker.js"></script>
-<script type="text/javascript" src="{Cycms::RES}/js/formCheck/formcheck.js"> </script>
+ <link rel="stylesheet" type="text/css" href="{cms::RES}/css/cymain.css" />
+ <link rel="stylesheet" href="{cms::STATICS}/kindeditor/themes/default/default.css" />
+<link rel="stylesheet" href="{cms::STATICS}/kindeditor/plugins/code/prettify.css" />
+<script src="{cms::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
+<script src="{cms::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
+<script src="{cms::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
+<script src="{cms::RES}/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="{cms::RES}/js/formCheck/formcheck.js"> </script>
 <script>
 
 var editor;
@@ -60,29 +60,29 @@ function calDiscount(){
 	$('#discount').attr('value',discount);
 }
 </script>
-<input type="hidden" id="catUrl" value="{Cycms::U('Product/ajaxCatOptions',array('token'=>$token))}" />
+<input type="hidden" id="catUrl" value="{cms::U('Product/ajaxCatOptions',array('token'=>$token))}" />
   <div class="content"> 
    <div class="cLineB"> 
     <h4>团购设置</h4> 
-    <a href="{Cycms::U('Groupon/products',array('token'=>$token))}" class="right  btnGreen" style="margin-top:-27px">返回</a> 
+    <a href="{cms::U('Groupon/products',array('token'=>$token))}" class="right  btnGreen" style="margin-top:-27px">返回</a> 
    </div> 
    
 
    <form class="form" method="post" id="form" action=""> 
 <if condition="$isUpdate eq 1">
-<input type="hidden" name="id" value="{Cycms:$set.id}" />
+<input type="hidden" name="id" value="{cms:$set.id}" />
 </if>
-<input type="hidden" name="discount" id="discount" value="{Cycms:$set.discount}" />
+<input type="hidden" name="discount" id="discount" value="{cms:$set.discount}" />
     <div class="msgWrap bgfc"> 
      <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"> 
       <tbody> 
        <tr> 
         <th><span class="red">*</span>名称：</th> 
-        <td><input type="text" id="name" name="name" value="{Cycms:$set.name}" class="px require" style="width:400px;" /></td> 
+        <td><input type="text" id="name" name="name" value="{cms:$set.name}" class="px require" style="width:400px;" /></td> 
        </tr> 
        <tr style="display:none"> 
         <th><span class="red">*</span>类别：</th> 
-        <td><select id="catid" name="catid"><option value="1000000000">请选择分类...</option>{Cycms:$catsOptions}</select></td> 
+        <td><select id="catid" name="catid"><option value="1000000000">请选择分类...</option>{cms:$catsOptions}</select></td> 
        </tr>
         <tr style="display:none"> 
         <th><span class="red">*</span>店铺：</th> 
@@ -90,37 +90,37 @@ function calDiscount(){
        </tr>
         <tr> 
         <th><span class="red">*</span>价格：</th>
-        <td><input type="text" id="price" onchange="calDiscount();" name="price" value="{Cycms:$set.price}" class="px" style="width:100px;" /> 元</td> 
+        <td><input type="text" id="price" onchange="calDiscount();" name="price" value="{cms:$set.price}" class="px" style="width:100px;" /> 元</td> 
        </tr>
        <tr> 
         <th><span class="red">*</span>原价：</th> 
-        <td><input type="text" id="oprice" onchange="calDiscount();" name="oprice" value="{Cycms:$set.oprice}" class="px" style="width:100px;" /> 元</td> 
+        <td><input type="text" id="oprice" onchange="calDiscount();" name="oprice" value="{cms:$set.oprice}" class="px" style="width:100px;" /> 元</td> 
        </tr>
        <tr> 
         <th><span class="red">*</span>截止日期：</th> 
-        <td><input type="input" class="px" id="enddate" value="{Cycms:$set.endtime|date="Y-m-d",###}" onClick="WdatePicker()" name="enddate" /></td> 
+        <td><input type="input" class="px" id="enddate" value="{cms:$set.endtime|date="Y-m-d",###}" onClick="WdatePicker()" name="enddate" /></td> 
        </tr>
        <tr> 
         <th><span class="red">*</span>报名基数：</th> 
-        <td><input type="text" id="fakemembercount" name="fakemembercount" value="{Cycms:$set.fakemembercount}" class="px" style="width:80px;" /> 人 （前台显示的报名人数会加上这个数字）</td> 
+        <td><input type="text" id="fakemembercount" name="fakemembercount" value="{cms:$set.fakemembercount}" class="px" style="width:80px;" /> 人 （前台显示的报名人数会加上这个数字）</td> 
        </tr>
         <tr> 
         <th><span class="red">*</span>关键词：</th>
-        <td><input type="text" name="keyword" id="keyword" value="{Cycms:$set.keyword}" class="px" style="width:400px;" /></td> 
+        <td><input type="text" name="keyword" id="keyword" value="{cms:$set.keyword}" class="px" style="width:400px;" /></td> 
        </tr>
         <tr> 
         <th><span class="red">*</span>Logo地址：</th>
-        <td><input type="text" name="logourl" value="{Cycms:$set.logourl}" class="px" style="width:350px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{Cycms::U('Upload/index',array('token'=>$token,'n'=>logourl))}')" value="点击上传图片"></td> 
+        <td><input type="text" name="logourl" value="{cms:$set.logourl}" class="px" style="width:350px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{cms::U('Upload/index',array('token'=>$token,'n'=>logourl))}')" value="点击上传图片"></td> 
        </tr>
         <TR>
                   <TH valign="top"><label for="info">图文详细页内容：</label></TH>
-                  <TD><textarea name="intro" id="intro"  rows="5" style="width:590px;height:360px">{Cycms:$set.intro}</textarea></TD>
+                  <TD><textarea name="intro" id="intro"  rows="5" style="width:590px;height:360px">{cms:$set.intro}</textarea></TD>
                 </TR>  
        <tr>         
        <th>&nbsp;</th>
        <td>
       <input type="hidden" name="groupon" value="1" />
-       <button type="submit" name="button" class="btnGreen">保存</button> &nbsp; <a href="{Cycms::U('Groupon/products',array('token'=>$token))}" class="btnGray vm">取消</a></td> 
+       <button type="submit" name="button" class="btnGreen">保存</button> &nbsp; <a href="{cms::U('Groupon/products',array('token'=>$token))}" class="btnGray vm">取消</a></td> 
        </tr> 
       </tbody> 
      </table> 

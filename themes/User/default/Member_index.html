@@ -1,5 +1,5 @@
 <include file="Public:head"/>
-<script src="{Cycms::RES}/js/date/WdatePicker.js"></script>  
+<script src="{cms::RES}/js/date/WdatePicker.js"></script>  
 <div class="content">
          
           <div class="cLineB">
@@ -45,24 +45,24 @@
 				 <volist id="list" name="list">
                 <TR>
                   <TD></TD>
-                  <TD>{Cycms:$i}</TD>
-                  <TD>{Cycms:$list.wechaname}</TD>
-                  <TD>{Cycms:$list.truename}</TD>
-                  <TD>{Cycms:$list.tel}</TD>
-                  <TD>{Cycms:$list.qq}</TD> 
-                  <TD>{Cycms:$list.info}</TD> 
+                  <TD>{cms:$i}</TD>
+                  <TD>{cms:$list.wechaname}</TD>
+                  <TD>{cms:$list.truename}</TD>
+                  <TD>{cms:$list.tel}</TD>
+                  <TD>{cms:$list.qq}</TD> 
+                  <TD>{cms:$list.info}</TD> 
                   <TD>
                    <if condition="$list['getcardtime'] neq false">
-                        {Cycms:$list.getcardtime|date='Y-m-d',###}
+                        {cms:$list.getcardtime|date='Y-m-d',###}
                     <else/>
                     无时间记录
                     </if>                      
                   </TD>
  <form method="post"  action="/index.php?g=User&m=Member&a=edit" >
                   <TD>
-                  <input type="text" name="add_expend" value="{Cycms:$list.add_expend}" class="px" style="width:40px;">
-                  <input type="hidden" name="token" value="{Cycms:$list.token}">
-                  <input type="hidden" name="wecha_id" value="{Cycms:$list.wecha_id}">
+                  <input type="text" name="add_expend" value="{cms:$list.add_expend}" class="px" style="width:40px;">
+                  <input type="hidden" name="token" value="{cms:$list.token}">
+                  <input type="hidden" name="wecha_id" value="{cms:$list.wecha_id}">
                    </TD>
                   <TD>
                   <input type="input" class="px" id="add_expend_time" value="<?php
@@ -75,7 +75,7 @@
                    <TD>  <button type="submit" style="cursor:pointer">修改</button></TD>
 </form>
                   <TD class="norightborder">				  
-				                 <a href="javascript:drop_confirm('您确定要删除吗?', '/index.php?g=User&m=Member&a=del&token={Cycms:$Think.get.token}&id={Cycms:$list.id}');"><strong>删除</strong></a> 
+				                 <a href="javascript:drop_confirm('您确定要删除吗?', '/index.php?g=User&m=Member&a=del&token={cms:$Think.get.token}&id={cms:$list.id}');"><strong>删除</strong></a> 
                   </TD>
                 </TR>
 				</volist>

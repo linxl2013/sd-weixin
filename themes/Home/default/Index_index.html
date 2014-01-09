@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> {Cycms::C('site_title')} {Cycms::C('site_name')}</title>
-<meta name="keywords" content="{Cycms::C('keyword')}" />
-<meta name="description" content="{Cycms::C('content')}" />
+<title> {cms::C('site_title')} {cms::C('site_name')}</title>
+<meta name="keywords" content="{cms::C('keyword')}" />
+<meta name="description" content="{cms::C('content')}" />
 <include file="Public:head" />
         <div id="body-container">
 <!--  banner开始 -->
@@ -73,7 +73,7 @@
                             <a class="tx_weibo" target="_blank" href="http://t.qq.com/wxapi8" title="请关注YiCms腾讯微博"></a>
                         </div>
 <div class="font_gn">
-<span class="green">{Cycms::C('site_name')}营销管理平台</span>为个人和企业提供基于微信公众平台的一系列功能，包括智能回复、微信3G网站、互动营销活动，会员管理，在线订单，数据统计等系统功能,带给你全新的微信互动营销体验。 <a class="green" href="{Cycms::U('Index/fc')}">了解更多 <img border="0" class="vm" src="{Cycms::RES}/images/more.gif"></a>
+<span class="green">{cms::C('site_name')}营销管理平台</span>为个人和企业提供基于微信公众平台的一系列功能，包括智能回复、微信3G网站、互动营销活动，会员管理，在线订单，数据统计等系统功能,带给你全新的微信互动营销体验。 <a class="green" href="{cms::U('Index/fc')}">了解更多 <img border="0" class="vm" src="{cms::RES}/images/more.gif"></a>
 </div>
 <div class="clr"></div>
 </div>
@@ -104,13 +104,13 @@
 <LI class="present004">
 <div class="presenttext">
 <h2>微信自定义菜单</h2>
-<p>{Cycms::C('site_name')}提供微信公众号自定义菜单管理功能，用户无需再通过输入关键词触发回复，直接点击菜单就可以看相关的内容，此功能如果结合微信3G网站可以使您的公众号用户体验更好，带个粉丝不一样的感受。</p>
+<p>{cms::C('site_name')}提供微信公众号自定义菜单管理功能，用户无需再通过输入关键词触发回复，直接点击菜单就可以看相关的内容，此功能如果结合微信3G网站可以使您的公众号用户体验更好，带个粉丝不一样的感受。</p>
 </div>
 </LI>
 <LI class="present005">
 <div class="presenttext">
 <h2>超炫微信3G网站，精美模板任意选</h2>
-<p>{Cycms::C('site_name')}全国首创微信3G网站，用户只要通过简单的设置，就能快速生成属于您自己的微信3G网站，并且有各种精美模板，供您选择，还有自定义模版，可以设计出自己的风格，让您的粉丝有种惊艳的感觉。<span class="green">给YiCms官方微信号输入"首页"体验微信3G网站。</span></p>
+<p>{cms::C('site_name')}全国首创微信3G网站，用户只要通过简单的设置，就能快速生成属于您自己的微信3G网站，并且有各种精美模板，供您选择，还有自定义模版，可以设计出自己的风格，让您的粉丝有种惊艳的感觉。<span class="green">给YiCms官方微信号输入"首页"体验微信3G网站。</span></p>
 </div>
 </LI>
 <LI class="present006">
@@ -122,13 +122,13 @@
 <LI class="present007">
 <div class="presenttext">
 <h2>实时数据统计，监控运营效果</h2>
-<p>{Cycms::C('site_name')}后台可以实时统计微信公众号的粉丝关注情况和用户语音请求数，根据统计对相关推广营销活动效果及某些敏感因素对您的影响作出判断，并对相关市场行为作出相应调整，从一定程度上实现了对市场的监控与及时应对。</span></p>
+<p>{cms::C('site_name')}后台可以实时统计微信公众号的粉丝关注情况和用户语音请求数，根据统计对相关推广营销活动效果及某些敏感因素对您的影响作出判断，并对相关市场行为作出相应调整，从一定程度上实现了对市场的监控与及时应对。</span></p>
 </div>
 </LI>
 <LI class="present008">
 <div class="presenttext">
-<h2><a href="{Cycms::U('Index/fc')}">更多功能介绍，请点击查看！</a></h2>
-<p>{Cycms::C('site_name')}会不断推出新功能，降低您的运营成本，提高微信营销效果。</span></p>
+<h2><a href="{cms::U('Index/fc')}">更多功能介绍，请点击查看！</a></h2>
+<p>{cms::C('site_name')}会不断推出新功能，降低您的运营成本，提高微信营销效果。</span></p>
 </div>
 </LI>
 </UL>
@@ -144,9 +144,9 @@
 <php>$list=F('case');</php>
 <volist name="list" id="vo">
 <li class="app-item"> 
-<a href="{Cycms:$vo.url}">
-<img src="{Cycms:$vo.img}" alt="{Cycms:$vo.name}">
-<span class="name ">{Cycms:$vo.name}</span>
+<a href="{cms:$vo.url}">
+<img src="{cms:$vo.img}" alt="{cms:$vo.name}">
+<span class="name ">{cms:$vo.name}</span>
 </a>
 </li>
 </volist>

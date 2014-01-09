@@ -38,13 +38,13 @@ class LotteryAction extends BaseAction{
 		}
 //1.新增
 $click = $Lottery['click']+1;
-		$upsql="update Cycms_lottery set click='".$click."' where id='".$_GET["id"]."'";
+		$upsql="update cms_lottery set click='".$click."' where id='".$_GET["id"]."'";
         mysql_query($upsql);
 		
-		$jsql="select * from Cycms_lottery_record where lid='".$_GET["id"]."'";
+		$jsql="select * from cms_lottery_record where lid='".$_GET["id"]."'";
         $jquery=mysql_query($jsql);
 		$jnum=mysql_num_rows($jquery);
-		$jupsql="update Cycms_lottery set joinnum='".$jnum."' where id='".$_GET["id"]."'";
+		$jupsql="update cms_lottery set joinnum='".$jnum."' where id='".$_GET["id"]."'";
 		mysql_query($jupsql);
 		
 		$data['On'] 		= 1;

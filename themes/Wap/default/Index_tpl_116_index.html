@@ -1,19 +1,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{Cycms:$tpl.wxname}</title>
+        <title>{cms:$tpl.wxname}</title>
         <base href="." />
         <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="format-detection" content="telephone=no" />
-        <link href="{Cycms::RES}/w54/w54.css" rel="stylesheet" type="text/css" />
+        <link href="{cms::RES}/w54/w54.css" rel="stylesheet" type="text/css" />
 
-        <link href="{Cycms::RES}/w54/iscroll.css" rel="stylesheet" type="text/css" />
-		<SCRIPT type=text/javascript src="{Cycms::RES}/w54/jquery-1.7.2.min.js"></SCRIPT>
-<SCRIPT type=text/javascript src="{Cycms::RES}/w54/rotate.js"></SCRIPT>
-<SCRIPT type=text/javascript src="{Cycms::RES}/w54/jquery.transform.js"></SCRIPT>
-<SCRIPT type=text/javascript src="{Cycms::RES}/w54/iscroll.js"></SCRIPT>
+        <link href="{cms::RES}/w54/iscroll.css" rel="stylesheet" type="text/css" />
+		<SCRIPT type=text/javascript src="{cms::RES}/w54/jquery-1.7.2.min.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{cms::RES}/w54/rotate.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{cms::RES}/w54/jquery.transform.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{cms::RES}/w54/iscroll.js"></SCRIPT>
 <script type="text/javascript">
             var myScroll;
 
@@ -38,14 +38,14 @@
 
  <BODY id="cate17"><!---轮播------>
  <div class="mainbg">
-                <img src="<if condition="$homeurl neq false">{Cycms:$homeurl}<else/>{Cycms::RES}/images/themes/bg1.jpg</if> "/>
+                <img src="<if condition="$homeurl neq false">{cms:$homeurl}<else/>{cms::RES}/images/themes/bg1.jpg</if> "/>
         </div>  
   <DIV class="bottom_nav">
 <DIV class="content">
  <volist name="info" id="vo">
-<A href="<if condition="$vo['url'] eq ''">{Cycms::U('Wap/Index/lists',array('classid'=>$vo['id'],'token'=>$vo['token']))}<else/>{Cycms:$vo.url|htmlspecialchars_decode}</if>">
-<P class="ico"><IMG src="{Cycms:$vo.img}""></P>
-<P class="title">{Cycms:$vo.name}</P></A>
+<A href="<if condition="$vo['url'] eq ''">{cms::U('Wap/Index/lists',array('classid'=>$vo['id'],'token'=>$vo['token']))}<else/>{cms:$vo.url|htmlspecialchars_decode}</if>">
+<P class="ico"><IMG src="{cms:$vo.img}""></P>
+<P class="title">{cms:$vo.name}</P></A>
  </volist>
 </A></DIV></DIV>
  <script>
@@ -81,7 +81,7 @@
 <php>echo htmlspecialchars_decode(C('copyright'))</php>
 </div>
 </eq>
-<div style="display:none">{Cycms:$tpl.tongji|htmlspecialchars_decode}</div>
+<div style="display:none">{cms:$tpl.tongji|htmlspecialchars_decode}</div>
 
 </body>
 </html>

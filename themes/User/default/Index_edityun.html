@@ -1,33 +1,33 @@
 <include file="Public:head"/>
 <div class="content">
           <div class="cLineB"><h4>云相册</h4></div>
-          <form method="post" action="{Cycms::U('User/Index/upsaveyun')}" enctype="multipart/form-data">
-          <input type="hidden" name="id" value="{Cycms:$info.id}">
+          <form method="post" action="{cms::U('User/Index/upsaveyun')}" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="{cms:$info.id}">
           <div class="msgWrap">
             <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
               <thead>
 			    <tr>
                   <th><span class="red">*</span>云相册AppKey：</th>
-                  <td><input type="text" required="" class="px" name="yunuser" value="{Cycms:$info.yunuser}" tabindex="1" size="25">
-                  <span class="red">如何获取云相册AppKey</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{Cycms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
+                  <td><input type="text" required="" class="px" name="yunuser" value="{cms:$info.yunuser}" tabindex="1" size="25">
+                  <span class="red">如何获取云相册AppKey</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{cms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
                   </td>
                 </tr>
                 <tr>
                   <th><span class="red">*</span>云相册AppSecret：</th>
-                  <td><input type="text" required="" class="px" name="yunpassword" value="{Cycms:$info.yunpassword}" tabindex="1" size="25">
-                  <span class="red">如何获取云相册AppSecret</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{Cycms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
+                  <td><input type="text" required="" class="px" name="yunpassword" value="{cms:$info.yunpassword}" tabindex="1" size="25">
+                  <span class="red">如何获取云相册AppSecret</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{cms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
                   </td>
                 </tr>
 				<tr>
                   <th><span class="red">*</span>云相册用户名：</th>
-                  <td><input type="text" required="" class="px" name="yunname" value="{Cycms:$info.yunname}" tabindex="1" size="25">
-                  <span class="red">如何获取用户名</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{Cycms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
+                  <td><input type="text" required="" class="px" name="yunname" value="{cms:$info.yunname}" tabindex="1" size="25">
+                  <span class="red">如何获取用户名</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{cms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
                   </td>
                 </tr>
 				<tr>
                   <th><span class="red">*</span>云相册域名：</th>
-                  <td><input type="text" required="" class="px" name="yundomain" value="{Cycms:$info.yundomain}" tabindex="1" size="25">
-                  <span class="red">如何获取域名</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{Cycms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
+                  <td><input type="text" required="" class="px" name="yundomain" value="{cms:$info.yundomain}" tabindex="1" size="25">
+                  <span class="red">如何获取域名</span><a href="http://cnrdn.com/uE7C" target="_blank"><img src="{cms::RES}/images/help.png" class="vm helpimg" title="帮助"></a>
                   </td>
                 </tr>
 				<tr>
@@ -40,16 +40,16 @@
                   </td>
                 </tr>
 				<div style="display:none;">
-				<input type="text" required="" class="px" name="wxname" value="{Cycms:$info.wxname}" tabindex="1" size="25">
-				<input type="text" disabled="disabled" required="" title="无法修改，您可以联系管理员" name="wxid" value="{Cycms:$info.wxid}" class="px" tabindex="1" size="25" style="color:#DDD;">
-				<input type="text" required="" name="weixin" value="{Cycms:$info.weixin}" class="px" tabindex="1" size="25">
-				<input class="px" name="headerpic" value="{Cycms:$info.headerpic}" size="60">
-				<input type="hidden" name="token" value="{Cycms:$info.token}" class="px" tabindex="1" size="40">
-				<input type="text" class="px" id="province" value="{Cycms:$info.province}" name="province" tabindex="1" size="20">
-				<input id="city" value="{Cycms:$info.city}" type="text" name="city" class="px" tabindex="1" size="20">
-				<input type="text" required="" class="px" tabindex="1" value="{Cycms:$info.qq}" name="qq" size="25">
-				<input type="text" required="" name="wxfans" value="{Cycms:$info.wxfans}" class="px" tabindex="1" size="25">
-				<input type="text" required="" name="type" value="{Cycms:$info.typeid}" class="px" tabindex="1" size="25">
+				<input type="text" required="" class="px" name="wxname" value="{cms:$info.wxname}" tabindex="1" size="25">
+				<input type="text" disabled="disabled" required="" title="无法修改，您可以联系管理员" name="wxid" value="{cms:$info.wxid}" class="px" tabindex="1" size="25" style="color:#DDD;">
+				<input type="text" required="" name="weixin" value="{cms:$info.weixin}" class="px" tabindex="1" size="25">
+				<input class="px" name="headerpic" value="{cms:$info.headerpic}" size="60">
+				<input type="hidden" name="token" value="{cms:$info.token}" class="px" tabindex="1" size="40">
+				<input type="text" class="px" id="province" value="{cms:$info.province}" name="province" tabindex="1" size="20">
+				<input id="city" value="{cms:$info.city}" type="text" name="city" class="px" tabindex="1" size="20">
+				<input type="text" required="" class="px" tabindex="1" value="{cms:$info.qq}" name="qq" size="25">
+				<input type="text" required="" name="wxfans" value="{cms:$info.wxfans}" class="px" tabindex="1" size="25">
+				<input type="text" required="" name="type" value="{cms:$info.typeid}" class="px" tabindex="1" size="25">
 				</div>
               </thead>
               

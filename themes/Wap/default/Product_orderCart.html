@@ -34,12 +34,12 @@
         <dl class="f_order_list single">
         <select name="buytimestamp" id="buytimestamp" onchange="tables()">
         <volist name="dateTimes" id="d">
-        <option value="{Cycms:$d}"><php>echo date('m月d日',$d);</php></option>
+        <option value="{cms:$d}"><php>echo date('m月d日',$d);</php></option>
         </volist>
         </select> <select name="hour" id="hour" onchange="tables()">
         <option value="" selected>选择时间</option>
         <volist name="hours" id="h">
-        <option value="{Cycms:$h}"><php>echo $h.'时';</php></option>
+        <option value="{cms:$h}"><php>echo $h.'时';</php></option>
         </volist>
         </select>
           <input type="hidden" placeholder="请输入具体日期和时间" id="buytime" name="buytime" value="" />
@@ -52,8 +52,8 @@
         <h2 class="p_mod_title">请选择桌台</h2>
         <dl class="f_order_list single">
             <volist name="tables" id="t">
-          <dd id="table_radio_{Cycms:$t.id}" <if condition="$i eq 0"> class = "on"</if>><label>{Cycms:$t.name}
-            <input type="radio" class="radio_tableid" name="tableid" value="{Cycms:$t.id}" /></label>
+          <dd id="table_radio_{cms:$t.id}" <if condition="$i eq 0"> class = "on"</if>><label>{cms:$t.name}
+            <input type="radio" class="radio_tableid" name="tableid" value="{cms:$t.id}" /></label>
           </dd>
             </volist>
          
@@ -69,9 +69,9 @@
     		<h2 class="p_mod_title">请填写个人信息</h2>
             <div id="city">
     		<ul>
-    			<li><strong>姓名：</strong><input type="text" placeholder="请输入姓名" id="truename" name="truename" value="{Cycms:$thisUser.truename}" /></li>
-    			<li><strong>手机：</strong><input type="text" placeholder="请输入联系人手机号" id="tel" name="tel" value="{Cycms:$thisUser.tel}" /></li>
-    			<li><strong>地址：</strong><input type="text" placeholder="请输入详细地址" id="address" name="address" value="{Cycms:$thisUser.address}" /></li>
+    			<li><strong>姓名：</strong><input type="text" placeholder="请输入姓名" id="truename" name="truename" value="{cms:$thisUser.truename}" /></li>
+    			<li><strong>手机：</strong><input type="text" placeholder="请输入联系人手机号" id="tel" name="tel" value="{cms:$thisUser.tel}" /></li>
+    			<li><strong>地址：</strong><input type="text" placeholder="请输入详细地址" id="address" name="address" value="{cms:$thisUser.address}" /></li>
                 <li><strong>联系方式保存到用户库：</strong><input type="checkbox" value="1" name="saveinfo" style="width: 16px;" /></li>
     		</ul>
             </div>
@@ -139,7 +139,7 @@ function showTip(tipTxt) {
 	}
 	function tables(){
 		$.ajax({
-					url:'?g=Wap&m=Product&a=ajaxTables&token={Cycms:$token}&time='+$('#buytimestamp').attr('value')+'&hour='+$('#hour').attr('value'),
+					url:'?g=Wap&m=Product&a=ajaxTables&token={cms:$token}&time='+$('#buytimestamp').attr('value')+'&hour='+$('#hour').attr('value'),
 					success : function(data) {
 						var tableids=data.split(',');
 

@@ -18,16 +18,16 @@
 	  </tr>
 	    <volist name="list" id="vo">
 			<tr>
-				<td align='center'>{Cycms:$vo.id}</td>
-				<td >{Cycms:$vo.name}</td>
-				<td >{Cycms:$vo.gid}</td>
-				<td >{Cycms:$vo.info}</td>
-				<td align='center'>{Cycms:$vo.usenum}</td>
+				<td align='center'>{cms:$vo.id}</td>
+				<td >{cms:$vo.name}</td>
+				<td >{cms:$vo.gid}</td>
+				<td >{cms:$vo.info}</td>
+				<td align='center'>{cms:$vo.usenum}</td>
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{Cycms::U('Function/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{Cycms::U('Function/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+					<a href="{cms::U('Function/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{cms::U('Function/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>
@@ -36,7 +36,7 @@
 		</style>
      <tr bgcolor="#FFFFFF"> 
 	 
-      <td colspan="7"><div class="listpage">{Cycms:$page}</div></td>
+      <td colspan="7"><div class="listpage">{cms:$page}</div></td>
      
     </tr>
    

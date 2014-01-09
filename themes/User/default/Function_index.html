@@ -12,8 +12,8 @@
 			<ul class="changeapp">
 				<volist name="fun" id="list" key="b">
 				<li>
-					<label> <input type="checkbox" <if condition="in_array($list['funname'],$check)">checked="checked"</if> <if condition="$list['gid'] gt session('gid')"> disabled="disabled" </if> onchange="changeapp(this,'{Cycms:$Think.session.token}','{Cycms:$list.id}')" value="{Cycms:$list.id}"/> {Cycms:$list.name}</label>
-					<div>查询例子:<br> {Cycms:$list.info}</div>
+					<label> <input type="checkbox" <if condition="in_array($list['funname'],$check)">checked="checked"</if> <if condition="$list['gid'] gt session('gid')"> disabled="disabled" </if> onchange="changeapp(this,'{cms:$Think.session.token}','{cms:$list.id}')" value="{cms:$list.id}"/> {cms:$list.name}</label>
+					<div>查询例子:<br> {cms:$list.info}</div>
 				</li>
 				</volist>
 			</ul>

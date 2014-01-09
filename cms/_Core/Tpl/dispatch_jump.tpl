@@ -16,12 +16,12 @@ body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16p
 </head>
 <body>
 <div class="system-message">
-	<p style="height:35px;background:url(/Cycmsdata/conf/images/msg_top_bg.png) #ccc;padding-left:10px;line-height:35px;color:white">Cycms友情提醒</p>
+	<p style="height:35px;background:url(/cmsdata/conf/images/msg_top_bg.png) #ccc;padding-left:10px;line-height:35px;color:white">cms友情提醒</p>
 	<div style="padding:24px;">
 		<present name="message">		
-		<div class="success"><img style="margin-right: 9px;padding-top:10px;" src="/Cycmsdata/conf/images/success.png"><span><?php echo($message); ?></span></div>
+		<div class="success"><img style="margin-right: 9px;padding-top:10px;" src="/cmsdata/conf/images/success.png"><span><?php echo($message); ?></span></div>
 		<else/>		
-		<div class="error"><img style="margin-right: 9px;padding-top:10px;" src="/Cycmsdata/conf/images/error.png" style="cursor:pointer;"><span style="padding-top:0px;"><?php echo($error); ?></div>
+		<div class="error"><img style="margin-right: 9px;padding-top:10px;" src="/cmsdata/conf/images/error.png" style="cursor:pointer;"><span style="padding-top:0px;"><?php echo($error); ?></div>
 		</present>
 	
 	</div>

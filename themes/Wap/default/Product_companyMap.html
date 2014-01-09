@@ -1,5 +1,5 @@
 <include file="Product:header"/>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak={Cycms::$apikey}"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak={cms::$apikey}"></script>
 <div class="main">
 	<div class="p_map">
     <div id="container"></div>
@@ -21,7 +21,7 @@
         		"" +
         		"</div>";
         	}
-        	var storeList = [{"id":"{Cycms::$thisCompany['id']}","name":"{Cycms::$thisCompany['name']}","logourl":"{Cycms::$thisCompany['logourl']}","address":"{Cycms::$thisCompany['address']}","tel":"{Cycms::$thisCompany['tel']}","longitude":"{Cycms::$thisCompany['longitude']}","latitude":"{Cycms::$thisCompany['latitude']}"}<volist name="branchStores" id="c">,{"id":"{Cycms::$c['id']}","name":"{Cycms::$c['name']}","logourl":"{Cycms::$c['logourl']}","address":"{Cycms::$c['address']}","tel":"{Cycms::$c['tel']}","longitude":"{Cycms::$c['longitude']}","latitude":"{Cycms::$c['latitude']}"}</volist>];
+        	var storeList = [{"id":"{cms::$thisCompany['id']}","name":"{cms::$thisCompany['name']}","logourl":"{cms::$thisCompany['logourl']}","address":"{cms::$thisCompany['address']}","tel":"{cms::$thisCompany['tel']}","longitude":"{cms::$thisCompany['longitude']}","latitude":"{cms::$thisCompany['latitude']}"}<volist name="branchStores" id="c">,{"id":"{cms::$c['id']}","name":"{cms::$c['name']}","logourl":"{cms::$c['logourl']}","address":"{cms::$c['address']}","tel":"{cms::$c['tel']}","longitude":"{cms::$c['longitude']}","latitude":"{cms::$c['latitude']}"}</volist>];
         	// 编写自定义函数,创建标注
         	function addMarker(point, content){
         	  var marker = new BMap.Marker(point);  // 创建标注
@@ -36,7 +36,7 @@
         		});
         	}
         	var map = new BMap.Map("container");
-        	var point = new BMap.Point({Cycms::$thisCompany['longitude']}, {Cycms::$thisCompany['latitude']});
+        	var point = new BMap.Point({cms::$thisCompany['longitude']}, {cms::$thisCompany['latitude']});
         	map.centerAndZoom(point, 15);
         	var user_marker = new BMap.Marker(point);  // 创建标注
         	map.addOverlay(user_marker);

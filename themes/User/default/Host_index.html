@@ -1,7 +1,7 @@
 <include file="Public:head"/>  
         <div class="content">
 <div class="cLineB">
-<h4 class="left">商家订单订单信息 ({Cycms:$page}) </h4>
+<h4 class="left">商家订单订单信息 ({cms:$page}) </h4>
 <div class="searchbar right">
 <form method="post" action="">
 <input type="text" id="msgSearchInput" class="txt left" placeholder="输入关键词搜索" name="searchkey" value="">
@@ -14,7 +14,7 @@
 <div class="clr"></div>
 </div>
 <div class="cLine">
-<div class="pageNavigator left"> <a href="{Cycms::U('Host/add',array('token'=>$token))}" title="新增订单商家" class="btnGrayS vm bigbtn"><img src="{Cycms::RES}/images/pic.png" class="vm">新增订单商家</a> </div>
+<div class="pageNavigator left"> <a href="{cms::U('Host/add',array('token'=>$token))}" title="新增订单商家" class="btnGrayS vm bigbtn"><img src="{cms::RES}/images/pic.png" class="vm">新增订单商家</a> </div>
 <div class="clr"></div>
 </div>
 <div class="msgWrap">
@@ -39,14 +39,14 @@
 <tr></tr>
 <volist name="list" id="hostlist"> 
 <tr>
-<td><input type="checkbox" name="del_id[{Cycms:$i}]" value="285" class="checkitem"></td>
-<td>{Cycms:$hostlist.title}</td>
-<td>{Cycms:$hostlist.keyword}</td>
-<td style="display:none">{Cycms:$hostlist.address}</td>
-<td>{Cycms:$hostlist.tel}</td>
-<td>{Cycms:$hostlist.creattime|date="Y-m-d H:i:s",###}</td> 
-<td>商家订单 {Cycms:$hostlist.id}</td>
-<td class="norightborder"><a href="{Cycms::U('Host/admin',array('id'=>$hostlist['id'],'token'=>$token))}">订单管理</a> <a href="{Cycms::U('Host/set',array('id'=>$hostlist['id'],'token'=>$token))}">商家设置</a> <a href="{Cycms::U('Host/lists',array('id'=>$hostlist['id'],'token'=>$token))}">订单设置</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{Cycms::U('Host/index_del',array('id'=>$hostlist['id'],'token'=>$token))}');">删除</a></td>
+<td><input type="checkbox" name="del_id[{cms:$i}]" value="285" class="checkitem"></td>
+<td>{cms:$hostlist.title}</td>
+<td>{cms:$hostlist.keyword}</td>
+<td style="display:none">{cms:$hostlist.address}</td>
+<td>{cms:$hostlist.tel}</td>
+<td>{cms:$hostlist.creattime|date="Y-m-d H:i:s",###}</td> 
+<td>商家订单 {cms:$hostlist.id}</td>
+<td class="norightborder"><a href="{cms::U('Host/admin',array('id'=>$hostlist['id'],'token'=>$token))}">订单管理</a> <a href="{cms::U('Host/set',array('id'=>$hostlist['id'],'token'=>$token))}">商家设置</a> <a href="{cms::U('Host/lists',array('id'=>$hostlist['id'],'token'=>$token))}">订单设置</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{cms::U('Host/index_del',array('id'=>$hostlist['id'],'token'=>$token))}');">删除</a></td>
 </tr>
 </volist>
 </tbody>
@@ -73,7 +73,7 @@ alert('未选中任何文章或回复！')
 </div>
 					<div class="cLine">
 						<div class="pageNavigator right">
-							<div class="pages">{Cycms:$page}</div>
+							<div class="pages">{cms:$page}</div>
 						</div>
 						<div class="clr"></div>
 					</div>

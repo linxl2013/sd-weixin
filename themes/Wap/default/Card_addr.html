@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="format-detection" content="telephone=no" />
 <title></title>
-<link rel="stylesheet" type="text/css" href="{Cycms::RES}/css/card/wei_webapp_new_v1.0.4.css" />
+<link rel="stylesheet" type="text/css" href="{cms::RES}/css/card/wei_webapp_new_v1.0.4.css" />
 </head>
 
 <body id="page_applicable" class="topCities">
@@ -16,14 +16,14 @@
   </div>
   <div class="inner root" style="height: 3576px;">
 <volist>
-    <h2>{Cycms:$contact.cname}</h2>
+    <h2>{cms:$contact.cname}</h2>
     <ul class="round">
-      <li class="addr" >{Cycms:$contact.info}</li>
-      <li class="tel" data-hidden-when-lost="{Cycms:$contact.tel}"><a class="autotel" href="tel:{Cycms:$contact.tel}" data-telnum="tel:{Cycms:$addr.tel}">{Cycms:$contact.tel}</a></li>
+      <li class="addr" >{cms:$contact.info}</li>
+      <li class="tel" data-hidden-when-lost="{cms:$contact.tel}"><a class="autotel" href="tel:{cms:$contact.tel}" data-telnum="tel:{cms:$addr.tel}">{cms:$contact.tel}</a></li>
     </ul>
 </volist>
   </div>
-  <div class="footFix" id="footReturn"><a href="javascript:void(0)" onClick="location.href='{Cycms::U('Card/vip',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';"><span>返回会员卡页</span></a></div>
+  <div class="footFix" id="footReturn"><a href="javascript:void(0)" onClick="location.href='{cms::U('Card/vip',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';"><span>返回会员卡页</span></a></div>
 </div>
 
 <!-------------------- templates end -------------------->

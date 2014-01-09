@@ -19,23 +19,23 @@
 	  </tr>
 	    <volist name="list" id="vo">
 			<tr>
-				<td align='center'>{Cycms:$vo.id}</td>
-				<td >{Cycms:$vo.username}</td>
-				<td >{Cycms:$role[$vo['role']]}</td>
-				<td >{Cycms:$vo.remark}</td>
-				<td align='center'>{Cycms:$vo.last_login_ip}</td>
-				<td align='center'>{Cycms:$vo.last_location}</td>
+				<td align='center'>{cms:$vo.id}</td>
+				<td >{cms:$vo.username}</td>
+				<td >{cms:$role[$vo['role']]}</td>
+				<td >{cms:$vo.remark}</td>
+				<td align='center'>{cms:$vo.last_login_ip}</td>
+				<td align='center'>{cms:$vo.last_location}</td>
 				<td align='center'><php>echo date('Y-m-d H:i:s', $vo['last_login_time'])</php></td>
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{Cycms::U('User/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{Cycms::U('User/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+					<a href="{cms::U('User/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{cms::U('User/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>
      <tr bgcolor="#FFFFFF"> 
-      <td colspan="8"><div class="listpage">{Cycms:$page}</div></td>
+      <td colspan="8"><div class="listpage">{cms:$page}</div></td>
     </tr>
    
 </table>

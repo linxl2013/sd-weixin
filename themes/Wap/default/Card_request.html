@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="format-detection" content="telephone=no" />
 <title></title>
-<link rel="stylesheet" type="text/css" href="{Cycms::RES}/css/card/wei_webapp_new_v1.0.4.css" />
-<script src="{Cycms::RES}/js/card/jquery.js"  type="text/javascript" ></script>
-<script src="{Cycms::RES}/js/card/rotate.js"  type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{cms::RES}/css/card/wei_webapp_new_v1.0.4.css" />
+<script src="{cms::RES}/js/card/jquery.js"  type="text/javascript" ></script>
+<script src="{cms::RES}/js/card/rotate.js"  type="text/javascript"></script>
 </head>
 <style>
 body{font: 12px/1.5 Microsoft YaHei,Helvitica,Verdana,Arial,san-serif;}
@@ -71,28 +71,28 @@ $(document).ready(function(){
 
 <div id="mappContainer">
 	<div class="inner root" style="height: 468px;">
-    <div id="card" class="card" style="background:url('<if condition="$card.diybg neq ''">{Cycms:$card.diybg}<else/>{Cycms:$card.bg}</if>') no-repeat 0 0;-webkit-background-size:267px 159px;background-size:267px 159px;">
-		  <img src="{Cycms:$card.logo}" class="logo"/>
-		  <h1 style="color:{Cycms:$card.vipnamecolor};text-shadow:0 1px #e2ded2;">{Cycms:$card.cardname}</h1>
+    <div id="card" class="card" style="background:url('<if condition="$card.diybg neq ''">{cms:$card.diybg}<else/>{cms:$card.bg}</if>') no-repeat 0 0;-webkit-background-size:267px 159px;background-size:267px 159px;">
+		  <img src="{cms:$card.logo}" class="logo"/>
+		  <h1 style="color:{cms:$card.vipnamecolor};text-shadow:0 1px #e2ded2;">{cms:$card.cardname}</h1>
 		  <figure class="pdo twodim" hidden=""><img data-src="006 4655"></figure>
 		  <figure class="pdo barcode" hidden=""><img data-src="006 4655"></figure>
 		  <strong class="pdo verify" style="">
-				<span style="color:#847d64;text-shadow:0 1px #ebe9e0;"><em style="color:#847d64;text-shadow:0 1px #ebe9e0;">会员卡号</em><span style="color:{Cycms:$card.numbercolor}">{Cycms:$card_info.number}</span></span>
+				<span style="color:#847d64;text-shadow:0 1px #ebe9e0;"><em style="color:#847d64;text-shadow:0 1px #ebe9e0;">会员卡号</em><span style="color:{cms:$card.numbercolor}">{cms:$card_info.number}</span></span>
 		  </strong>
 	  </div>
 	  <!--会员卡背面-->
-	  <div id="card2" class="card" style="background:url('<if condition="$card.diybg neq ''">{Cycms:$card.diybg}<else/>{Cycms:$card.bg}</if>') no-repeat 0 0;-webkit-background-size:267px 159px;background-size:267px 159px;display:none">
-		  <img src="{Cycms:$card.logo}" class="logo"/>
-		  <h1 style="color:{Cycms:$card.vipnamecolor};text-shadow:0 1px #e2ded2;">{Cycms:$card.cardname}</h1>
-		  <div style="padding-top:15px;color:#847d64;font-size:12px;margin-left:10px;"><span style="color:{Cycms:$card.vipnamecolor}">总店电话：{Cycms:$contact.tel}</span><p></p>
-		  <span style="color:{Cycms:$card.vipnamecolor}">总店地址：{Cycms:$contact.info}</span>
+	  <div id="card2" class="card" style="background:url('<if condition="$card.diybg neq ''">{cms:$card.diybg}<else/>{cms:$card.bg}</if>') no-repeat 0 0;-webkit-background-size:267px 159px;background-size:267px 159px;display:none">
+		  <img src="{cms:$card.logo}" class="logo"/>
+		  <h1 style="color:{cms:$card.vipnamecolor};text-shadow:0 1px #e2ded2;">{cms:$card.cardname}</h1>
+		  <div style="padding-top:15px;color:#847d64;font-size:12px;margin-left:10px;"><span style="color:{cms:$card.vipnamecolor}">总店电话：{cms:$contact.tel}</span><p></p>
+		  <span style="color:{cms:$card.vipnamecolor}">总店地址：{cms:$contact.info}</span>
 		  </div>
 	  </div>
-    <p><span data-hidden-when-lost="使用时向服务员出示此卡">{Cycms:$card.msg}</span></p>
+    <p><span data-hidden-when-lost="使用时向服务员出示此卡">{cms:$card.msg}</span></p>
     <ul class="round" style="display:block">
      <li style="height:70px;" class="intro">	 
 		<div class="footReturn">
-			<button id="showcard" class="submit"  onclick="Javascript:window.open('{Cycms::U('Userinfo/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}','_parent')"  style="width:100%">点击领取会员卡</button>
+			<button id="showcard" class="submit"  onclick="Javascript:window.open('{cms::U('Userinfo/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}','_parent')"  style="width:100%">点击领取会员卡</button>
 			<div class="window" id="windowcenter">
 				<div id="title" class="wtitle"><span class="close" id="alertclose"></span></div>
 				<div class="content">
@@ -106,9 +106,9 @@ $(document).ready(function(){
     </ul>
      <ul class="round" style="display:block">
      <li class="intro">
-		<div style="width:99%;background:rgb(134, 141, 46);color:white;line-height:30px;padding-left:10px;">商家介绍 - {Cycms:$info.description}</div>
+		<div style="width:99%;background:rgb(134, 141, 46);color:white;line-height:30px;padding-left:10px;">商家介绍 - {cms:$info.description}</div>
 		<div >
-			<span style="float:left;padding-righ:10px"><img src="{Cycms:$info.logo}"/></span>{Cycms:$info.info}
+			<span style="float:left;padding-righ:10px"><img src="{cms:$info.logo}"/></span>{cms:$info.info}
 			
 		</div>
 		
@@ -116,7 +116,7 @@ $(document).ready(function(){
 	</ul>
 	<ul class="round" style="display:block;margin-bottom:5px;">
      <li class="intro">
-		{Cycms::C('copyright')}
+		{cms::C('copyright')}
 	</li>   
 	</ul>
   </div>

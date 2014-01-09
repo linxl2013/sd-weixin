@@ -8,7 +8,7 @@ class SnsAction extends BaseAction{
 		define('BASEPATH','1');
 		$name=$this->_get('name');
 		$app=C($name);
-		include realpath('Cycms/_Core/Extend/Vendor/Oauth/OAuth2.class.php');
+		include realpath('cms/_Core/Extend/Vendor/Oauth/OAuth2.class.php');
 		$status=Oauth2::provider($name,$app);
 		dump($status);
 	}

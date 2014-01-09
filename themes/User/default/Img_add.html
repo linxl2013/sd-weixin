@@ -1,9 +1,9 @@
 <include file="Public:head"/>
-<link rel="stylesheet" href="{Cycms::STATICS}/kindeditor/themes/default/default.css" />
-<link rel="stylesheet" href="{Cycms::STATICS}/kindeditor/plugins/code/prettify.css" />
-<script src="{Cycms::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
-<script src="{Cycms::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
-<script src="{Cycms::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
+<link rel="stylesheet" href="{cms::STATICS}/kindeditor/themes/default/default.css" />
+<link rel="stylesheet" href="{cms::STATICS}/kindeditor/plugins/code/prettify.css" />
+<script src="{cms::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
+<script src="{cms::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
+<script src="{cms::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
 <script>
 
 var editor;
@@ -24,7 +24,7 @@ items : [
 <div class="content">
           <div class="cLineB"><h4>编辑图文自定义内容</h4><a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a></div>
          
-          <form method="post"   action="{Cycms::U('Img/insert')}"  enctype="multipart/form-data" >
+          <form method="post"   action="{cms::U('Img/insert')}"  enctype="multipart/form-data" >
           <div class="msgWrap form">
             <TABLE class="userinfoArea" border="0" cellSpacing="0" cellPadding="0" width="100%">
               <THEAD>
@@ -55,13 +55,13 @@ items : [
                   <TD>
                    <select name="classid">
                       <volist name="info" id="vo">
-                     <option   value="{Cycms:$vo.id},{Cycms:$vo.name}">{Cycms:$vo.name}</option>
+                     <option   value="{cms:$vo.id},{cms:$vo.name}">{cms:$vo.name}</option>
                       </volist>  
-                    </select><a href="{Cycms::U('Classify/add')}"  target="ddd" >添加分类</a>
+                    </select><a href="{cms::U('Classify/add')}"  target="ddd" >添加分类</a>
                   </TD>
                 </TR>
                   <TH valign="top"><label for="pic">封面图片地址：</label></TH>
-                  <TD><input class="text textMiddle inputQ"  name="pic" value="" style="width:480px;"  /><input class="btnFile btnGreen" type=button onclick="window.open('{Cycms::U('Upload/index',array('token'=>$token,'n'=>pic))}')" value="点击上传图片"><br />
+                  <TD><input class="text textMiddle inputQ"  name="pic" value="" style="width:480px;"  /><input class="btnFile btnGreen" type=button onclick="window.open('{cms::U('Upload/index',array('token'=>$token,'n'=>pic))}')" value="点击上传图片"><br />
                   支持外链和上传到本地或者云相册 
 </TD>
                 </TR>
@@ -81,7 +81,7 @@ items : [
                 </TR>
                 <TR>
                   <TH></TH>
-                  <TD><input type="submit" value="保存" name="sbmt" class="btnGreen left">　<a href="{Cycms::U('Img/index')}"  class="btnGray vm">取消</a></TD>
+                  <TD><input type="submit" value="保存" name="sbmt" class="btnGreen left">　<a href="{cms::U('Img/index')}"  class="btnGray vm">取消</a></TD>
                 </TR>
               </TBODY>
             </TABLE>

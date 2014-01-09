@@ -2,38 +2,38 @@
  <div class="content">
           <div class="cLineB"><h4>编辑文章分类</h4><a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a></div> 
 <div class="msgWrap">
-  <form class="form" method="post"   action="{Cycms::U('Classify/upsave')}"  target="_top" enctype="multipart/form-data" >
+  <form class="form" method="post"   action="{cms::U('Classify/upsave')}"  target="_top" enctype="multipart/form-data" >
 <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
   <THEAD>
 <TR>
   <TH valign="top"><label for="keyword">分类名称：</label></TH>
-  <TD><input type="input" class="px" id="keyword" value="{Cycms:$info.name}" name="name" style="width:500px" ><br />
+  <TD><input type="input" class="px" id="keyword" value="{cms:$info.name}" name="name" style="width:500px" ><br />
                   </TD>
   <TD>&nbsp;</TD>
 </TR>
                             </THEAD>
-  <TBODY><input type="hidden" name="id" value="{Cycms:$info.id}"/>
+  <TBODY><input type="hidden" name="id" value="{cms:$info.id}"/>
 <TR>
   <TH valign="top"><label for="keyword">分类描述：</label></TH>
-  <TD><input type="input" class="px" id="keyword" value="{Cycms:$info.info}" name="info" style="width:500px" ><br />
+  <TD><input type="input" class="px" id="keyword" value="{cms:$info.info}" name="info" style="width:500px" ><br />
                   30个字简短分类描述，可为空   </TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR>
   <TH valign="top"><label for="keyword">分类图片外链地址：</label></TH>
-  <TD><input type="input" class="px" id="keyword" value="{Cycms:$info.img}" name="img" style="width:380px" ><input class="btnFile btnGreen" type=button onclick="window.open('{Cycms::U('Upload/index',array('token'=>$token,'n'=>img))}')" value="点击上传图片"><br />
+  <TD><input type="input" class="px" id="keyword" value="{cms:$info.img}" name="img" style="width:380px" ><input class="btnFile btnGreen" type=button onclick="window.open('{cms::U('Upload/index',array('token'=>$token,'n'=>img))}')" value="点击上传图片"><br />
                   为了提搞速度，建议将图片上传QQ空间然后获取链接地址，微信限制3秒内无反应将终止；图片(宽720高400)</TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR>
   <TH valign="top"><label for="keyword">URL或活动外链代码 ：</label></TH>
-  <TD><input type="input" class="px" id="keyword" value="{Cycms:$info.url}" name="url" style="width:500px" ><br />
+  <TD><input type="input" class="px" id="keyword" value="{cms:$info.url}" name="url" style="width:500px" ><br />
                    </TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR>
   <TH valign="top"><label for="keyword">排序：</label></TH>
-  <TD><input type="input" class="px" id="keyword" value="{Cycms:$info.sorts}" name="sorts" style="width:500px" ><br />
+  <TD><input type="input" class="px" id="keyword" value="{cms:$info.sorts}" name="sorts" style="width:500px" ><br />
                    </TD>
   <TD>&nbsp;</TD>
 </TR>

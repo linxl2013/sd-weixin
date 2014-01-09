@@ -19,7 +19,7 @@ items : [
 });
 });
 </script>
-<script src="{Cycms::RES}/js/date/WdatePicker.js"></script>
+<script src="{cms::RES}/js/date/WdatePicker.js"></script>
 <div class="content">
         <div class="cLineB">
 			<h4>发布礼品券 <span class="FAQ">发布积分兑换礼品信息</span></h4>
@@ -32,23 +32,23 @@ items : [
               <tbody>
 				<tr>
               		<th>礼品名称：</th>
-              		<td><input type="input" class="px" id="title" value="{Cycms:$vip.title}" name="title" style="width:400px;"> </td>
+              		<td><input type="input" class="px" id="title" value="{cms:$vip.title}" name="title" style="width:400px;"> </td>
               	</tr>
 				<tr>
 					<th>兑换礼品所需积分：</th>
-					<td><input type="input" class="px" id="title" value="{Cycms:$vip.integral}" name="integral" style="width:50px;"> 积分				　
+					<td><input type="input" class="px" id="title" value="{cms:$vip.integral}" name="integral" style="width:50px;"> 积分				　
 				</td>
 				</tr>
               	<tr>
 					<th>有效期：</th>
 					<td>
-						<input type="input" class="px" id="statdate" value="<if condition="$vip['statdate'] neq false">{Cycms:$vip.statdate|date="Y-m-d H:i:s",###}</if>" onclick="WdatePicker()" name="statdate"> （含）到 
-						<input type="input" class="px" id="enddate" value="<if condition="$vip['enddate'] neq false">{Cycms:$vip.enddate|date="Y-m-d H:i:s",###}</if>" name="enddate" onclick="WdatePicker()">（含）
+						<input type="input" class="px" id="statdate" value="<if condition="$vip['statdate'] neq false">{cms:$vip.statdate|date="Y-m-d H:i:s",###}</if>" onclick="WdatePicker()" name="statdate"> （含）到 
+						<input type="input" class="px" id="enddate" value="<if condition="$vip['enddate'] neq false">{cms:$vip.enddate|date="Y-m-d H:i:s",###}</if>" name="enddate" onclick="WdatePicker()">（含）
 					</td>
 				</tr>
               	<tr>
               		<th valign="top">使用说明：</th>
-              		<td><textarea name="info" id="info" rows="5" style="width: 410px; height: 250px; display: none;">{Cycms:$vip.info}</textarea></td>
+              		<td><textarea name="info" id="info" rows="5" style="width: 410px; height: 250px; display: none;">{cms:$vip.info}</textarea></td>
               		</tr>
 
               	<tr>

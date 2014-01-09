@@ -16,7 +16,7 @@ box-shadow:0 0px 5px 0 rgba(0, 0, 0, 0.25);
 -webkit-border-radius:5px 5px 10px 10px;
 -moz-border-radius:5px 5px 10px 10px;
 border-radius:5px 5px 10px 10px;
-background: url({Cycms::RES}/images/photo/bottom.png) repeat-x scroll left bottom #FFFFFF;
+background: url({cms::RES}/images/photo/bottom.png) repeat-x scroll left bottom #FFFFFF;
 background-size:2px auto;
 }
 .chatPanel .media .mediaHead .title {
@@ -88,7 +88,7 @@ document.getElementById("zname2").innerHTML=document.getElementById("name").valu
 <div class="mediaPanel">
 <div class="mediaHead"><span class="title" id="zname">相册名称</span>
 </div>
-<div class="mediaImg"><img id="zpic" src="{Cycms::RES}/images/photo/noneimg.jpg"></div>
+<div class="mediaImg"><img id="zpic" src="{cms::RES}/images/photo/noneimg.jpg"></div>
 <div class="mediaContent mediaContentP">
 <p id="zinfo">相册说明文字，尽量简短，突出重点就好！</p>
 </div>
@@ -109,7 +109,7 @@ document.getElementById("zname2").innerHTML=document.getElementById("name").valu
 <div class="mediaPanel">
 <div class="mediaHead" style="padding: 10px 10px 0px;">
 </div>
-<div class="mediaImg"><img id="zpic2" src="{Cycms::RES}/images/photo/noneimg.jpg"/></div>
+<div class="mediaImg"><img id="zpic2" src="{cms::RES}/images/photo/noneimg.jpg"/></div>
 <div class="mediaFooter">
 <span class="mesgIcon right"></span>
 <span style="line-height:50px; font-size:16px" id="zname2">相册名称</span>
@@ -128,7 +128,7 @@ document.getElementById("zname2").innerHTML=document.getElementById("name").valu
 <th valign="top"><span class="red">*</span>相册封面图：</th>
 <td width="430"><input type="text" name="picurl" value="" class="px" style="width:400px;" id="pic" onblur="document.getElementById('zpic').src=document.getElementById('pic').value;document.getElementById('zpic2').src=document.getElementById('pic').value;">
 <br>									
-外链图片地址，尺寸720×400.<input style="font-size:12px;color:red"type=button onclick="window.open('{Cycms::U('Upload/index',array('token'=>$token,'n'=>picurl))}')" value="点击上传图片"></td>
+外链图片地址，尺寸720×400.<input style="font-size:12px;color:red"type=button onclick="window.open('{cms::U('Upload/index',array('token'=>$token,'n'=>picurl))}')" value="点击上传图片"></td>
 </tr>
 <tr>
    <th valign="top">相册介绍：</th>

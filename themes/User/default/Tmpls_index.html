@@ -1,12 +1,12 @@
 <include file="Public:head"/>
-<link rel="stylesheet" href="{Cycms::STATICS}/kindeditor/themes/default/default.css" />
-<link rel="stylesheet" href="{Cycms::STATICS}/kindeditor/plugins/code/prettify.css" />
-<script src="{Cycms::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
-<script src="{Cycms::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
-<script src="{Cycms::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
+<link rel="stylesheet" href="{cms::STATICS}/kindeditor/themes/default/default.css" />
+<link rel="stylesheet" href="{cms::STATICS}/kindeditor/plugins/code/prettify.css" />
+<script src="{cms::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
+<script src="{cms::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
+<script src="{cms::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
 <div class="content">
     <div class="cLineB">
-        <h4>模板管理 <span class="FAQ">选择适合您的模版风格，手机输入"首页"测试效果。(部分模版如无法选择请提升等级后方可选择)</span></h4><a href="{Cycms::U('User/Yulan/index',array('token'=>$_SESSION['token']))}" target="ddd" class="right btnGrayS vm" style="margin-top:-27px">微网站预览</a>
+        <h4>模板管理 <span class="FAQ">选择适合您的模版风格，手机输入"首页"测试效果。(部分模版如无法选择请提升等级后方可选择)</span></h4><a href="{cms::U('User/Yulan/index',array('token'=>$_SESSION['token']))}" target="ddd" class="right btnGrayS vm" style="margin-top:-27px">微网站预览</a>
     </div>
     <div class="msgWrap form">
         <ul id="tags">
@@ -22,185 +22,185 @@
                     <ul class="cateradio">
                         <li <eq name="info.tpltypeid" value="1">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate1.png">
+                                <img src="{cms::RES}/images/cate1.png">
                                 <input class="radio" type="radio" name="optype" value="1" <eq name="info.tpltypeid" value="1">checked</eq> /> 模板1 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="2">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate2.png">
+                                <img src="{cms::RES}/images/cate2.png">
                                 <input class="radio" type="radio" name="optype" value="2" <eq name="info.tpltypeid" value="2">checked</eq> /> 模板2 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="3">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate3.png">
+                                <img src="{cms::RES}/images/cate3.png">
                                 <input class="radio" type="radio" name="optype" value="3" <eq name="info.tpltypeid" value="3">checked</eq> /> 模板3 
                             </label>
                         </li>
                           <li <eq name="info.tpltypeid" value="4">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate4.png">
+                                <img src="{cms::RES}/images/cate4.png">
                                 <input class="radio" type="radio" name="optype" value="4" <eq name="info.tpltypeid" value="4">checked</eq> /> 模板4 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="5">class="active"</eq>><label>
-                                <img src="{Cycms::RES}/images/cate9.png">
+                                <img src="{cms::RES}/images/cate9.png">
                                 <input class="radio" type="radio" name="optype" value="5" <eq name="info.tpltypeid" value="5">checked</eq> /> 模板5 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="6">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate106.png">
+                                <img src="{cms::RES}/images/cate106.png">
                                 <input class="radio" type="radio" name="optype" value="6" <eq name="info.tpltypeid" value="6">checked</eq> /> 模板6 
                             </label>
                         </li> 
                         <li <eq name="info.tpltypeid" value="7">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate107.png">
+                                <img src="{cms::RES}/images/cate107.png">
                                 <input class="radio" type="radio" name="optype" value="7" <eq name="info.tpltypeid" value="7">checked</eq> /> 模板7 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="8">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate108.png">
+                                <img src="{cms::RES}/images/cate108.png">
                                 <input class="radio" type="radio" name="optype" value="8" <eq name="info.tpltypeid" value="8">checked</eq> /> 模板8
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="9">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate109.png">
+                                <img src="{cms::RES}/images/cate109.png">
                                 <input class="radio" type="radio" name="optype" value="9" <eq name="info.tpltypeid" value="9">checked</eq> /> 模板9 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="10">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate110.png">
+                                <img src="{cms::RES}/images/cate110.png">
                                 <input class="radio" type="radio" name="optype" value="10" <eq name="info.tpltypeid" value="10">checked</eq> /> 模板10 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="11">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate111.png">
+                                <img src="{cms::RES}/images/cate111.png">
                                 <input class="radio" type="radio" name="optype" value="11" <eq name="info.tpltypeid" value="11">checked</eq> /> 模板11
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="12">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate112.png">
+                                <img src="{cms::RES}/images/cate112.png">
                                 <input class="radio" type="radio" name="optype" value="12" <eq name="info.tpltypeid" value="12">checked</eq> /> 模板12
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="13">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate113.png">
+                                <img src="{cms::RES}/images/cate113.png">
                                 <input class="radio" type="radio" name="optype" value="13" <eq name="info.tpltypeid" value="13">checked</eq> /> 模板13
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="14">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate114.png">
+                                <img src="{cms::RES}/images/cate114.png">
                                 <input class="radio" type="radio" name="optype" value="14" <eq name="info.tpltypeid" value="14">checked</eq> /> 模板14
                             </label>
                         </li> 
                          <li <eq name="info.tpltypeid" value="15">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate5.png">
+                                <img src="{cms::RES}/images/cate5.png">
                                 <input class="radio" type="radio" name="optype" value="15" <eq name="info.tpltypeid" value="15">checked</eq> /> 模板15
                             </label>
                         </li>
                        <li <eq name="info.tpltypeid" value="16">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate116.png">
+                                <img src="{cms::RES}/images/cate116.png">
                                 <input class="radio" type="radio" name="optype" value="16" <eq name="info.tpltypeid" value="16">checked</eq> /> 模板16 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="17">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate117.png">
+                                <img src="{cms::RES}/images/cate117.png">
                                 <input class="radio" type="radio" name="optype" value="17" <eq name="info.tpltypeid" value="17">checked</eq> /> 模板17
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="18">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate118.png">
+                                <img src="{cms::RES}/images/cate118.png">
                                 <input class="radio" type="radio" name="optype" value="18" <eq name="info.tpltypeid" value="18">checked</eq> /> 模板18
                             </label>
                         </li>
                           <li <eq name="info.tpltypeid" value="19">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate119.png">
+                                <img src="{cms::RES}/images/cate119.png">
                                 <input class="radio" type="radio" name="optype" value="19" <eq name="info.tpltypeid" value="19">checked</eq> /> 模板19 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="20">class="active"</eq>><label>
-                                <img src="{Cycms::RES}/images/cate120.png">
+                                <img src="{cms::RES}/images/cate120.png">
                                 <input class="radio" type="radio" name="optype" value="20" <eq name="info.tpltypeid" value="20">checked</eq> /> 模板20
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="21">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate121.png">
+                                <img src="{cms::RES}/images/cate121.png">
                                 <input class="radio" type="radio" name="optype" value="21" <eq name="info.tpltypeid" value="21">checked</eq> /> 模板21 
                             </label>
                         </li> 
                         <li <eq name="info.tpltypeid" value="22">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate122.png">
+                                <img src="{cms::RES}/images/cate122.png">
                                 <input class="radio" type="radio" name="optype" value="22" <eq name="info.tpltypeid" value="22">checked</eq> /> 模板22 
                             </label>
                         </li> 
                         <li <eq name="info.tpltypeid" value="23">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate123.png">
+                                <img src="{cms::RES}/images/cate123.png">
                                 <input class="radio" type="radio" name="optype" value="23" <eq name="info.tpltypeid" value="23">checked</eq> /> 模板23
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="24">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate124.png">
+                                <img src="{cms::RES}/images/cate124.png">
                                 <input class="radio" type="radio" name="optype" value="24" <eq name="info.tpltypeid" value="24">checked</eq> /> 模板24
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="25">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate125.png">
+                                <img src="{cms::RES}/images/cate125.png">
                                 <input class="radio" type="radio" name="optype" value="25" <eq name="info.tpltypeid" value="25">checked</eq> /> 模板25 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="26">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate126.png">
+                                <img src="{cms::RES}/images/cate126.png">
                                 <input class="radio" type="radio" name="optype" value="26" <eq name="info.tpltypeid" value="26">checked</eq> /> 模板26 
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="27">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate127.png">
+                                <img src="{cms::RES}/images/cate127.png">
                                 <input class="radio" type="radio" name="optype" value="27" <eq name="info.tpltypeid" value="27">checked</eq> /> 模板27
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="28">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate128.png">
+                                <img src="{cms::RES}/images/cate128.png">
                                 <input class="radio" type="radio" name="optype" value="28" <eq name="info.tpltypeid" value="28">checked</eq> /> 模板28
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="29">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate129.png">
+                                <img src="{cms::RES}/images/cate129.png">
                                 <input class="radio" type="radio" name="optype" value="29" <eq name="info.tpltypeid" value="29">checked</eq> /> 模板29
                             </label>
                         </li>
                         <li <eq name="info.tpltypeid" value="30">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate130.png">
+                                <img src="{cms::RES}/images/cate130.png">
                                 <input class="radio" type="radio" name="optype" value="30" <eq name="info.tpltypeid" value="30">checked</eq> /> 模板30
                             </label>
                         </li> 
                          <!--<li <eq name="info.tpltypeid" value="31">class="active"</eq>>
                             <label>
-                                <img src="{Cycms::RES}/images/cate131.png">
+                                <img src="{cms::RES}/images/cate131.png">
                                 <input class="radio" type="radio" name="optype" value="31" <eq name="info.tpltypeid" value="31">checked</eq> /> 模板31
                             </label>
                         </li> -->
@@ -211,12 +211,12 @@
                 <fieldset>
                     <ul class="cateradio2">
                         <li <eq name="info.tpllistid" value="4">class="active"</eq> >
-                            <label><img src="{Cycms::RES}/images/list4.png">
+                            <label><img src="{cms::RES}/images/list4.png">
                                 <input class="radio2" type="radio" name="optype2" <eq name="Think.session.gid" value="2">disabled="disabled"</eq> value="4" <eq name="info.tpllistid" value="4">checked</eq> /> 模板2(省流量)
                             </label>
                         </li>
                         <li <eq name="info.tpllistid" value="1">class="active"</eq>>
-                            <label><img src="{Cycms::RES}/images/list1.png">
+                            <label><img src="{cms::RES}/images/list1.png">
                                 <input class="radio2" type="radio" name="optype2" value="1" <eq name="info.tpllistid" value="1">checked</eq> /> 模板1(美观)
                             </label>
                         </li>
@@ -226,8 +226,8 @@
             <div class="tagContent" id="tagContent2">
                 <fieldset>
                     <ul class="cateradio3">
-                        <li <eq name="info.tplcontentid" value="1">class="active"</eq> ><label><img src="{Cycms::RES}/images/news1.png"><input class="radio3" type="radio" name="optype3" value="1" <eq name="info.tplcontentid" value="1">checked</eq>/>模板1(有头像) </label></li>
-                        <li <eq name="info.tplcontentid" value="3">class="active"</eq> ><label><img src="{Cycms::RES}/images/news3.png"><input class="radio3" type="radio" name="optype3" value="3" <eq name="info.tplcontentid" value="3">checked</eq>/>模板3(无头像)</label></li>
+                        <li <eq name="info.tplcontentid" value="1">class="active"</eq> ><label><img src="{cms::RES}/images/news1.png"><input class="radio3" type="radio" name="optype3" value="1" <eq name="info.tplcontentid" value="1">checked</eq>/>模板1(有头像) </label></li>
+                        <li <eq name="info.tplcontentid" value="3">class="active"</eq> ><label><img src="{cms::RES}/images/news3.png"><input class="radio3" type="radio" name="optype3" value="3" <eq name="info.tplcontentid" value="3">checked</eq>/>模板3(无头像)</label></li>
                     </ul>
                 </fieldset>
             </div>

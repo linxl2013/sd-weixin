@@ -8,15 +8,15 @@
                 <volist name="products" id="p">
               <div class="car_list clearfix">
                 <div class="car_content clearfix">
-                  <h3><a href="{Cycms::U('Product/product',array('token'=>$token,'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">{Cycms:$p.name}</a></h3>
-                     <a href="{Cycms::U('Product/product',array('token'=>$token,'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">
-                      <img src="{Cycms:$p.logourl}" />
+                  <h3><a href="{cms::U('Product/product',array('token'=>$token,'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">{cms:$p.name}</a></h3>
+                     <a href="{cms::U('Product/product',array('token'=>$token,'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">
+                      <img src="{cms:$p.logourl}" />
                      </a>
                      <div class="car_property">
-                        <span class="price_now">单价：<font>￥{Cycms:$p.price}</font></span>
-                                                <div class="o_num_input clearfix" id="{Cycms:$p.id}">
+                        <span class="price_now">单价：<font>￥{cms:$p.price}</font></span>
+                                                <div class="o_num_input clearfix" id="{cms:$p.id}">
                             
-                            数量：{Cycms:$p.count}
+                            数量：{cms:$p.count}
                            
                         </div>
                                              
@@ -24,7 +24,7 @@
                 </div>
               </div>
                  </volist>
-                            <p><span class="price_now" id="total_fee">总价格：<font>￥{Cycms:$totalFee}</font></span></p>
+                            <p><span class="price_now" id="total_fee">总价格：<font>￥{cms:$totalFee}</font></span></p>
             </div>            
     	</div>
 
@@ -45,9 +45,9 @@
     		<h2 class="p_mod_title">接收信息</h2>
             <div id="city">
     		<ul>
-    			<li><strong>姓名：</strong><input type="text" placeholder="请输入收货人姓名" id="truename" name="truename" value="{Cycms:$thisOrder.truename}" /></li>
-    			<li><strong>手机：</strong><input type="text" placeholder="请输入联系人手机号" id="tel" name="tel" value="{Cycms:$thisOrder.tel}" /></li>
-    			<li><strong>地址：</strong><input type="text" placeholder="请输入详细地址" id="address" name="address" value="{Cycms:$thisOrder.address}" /></li>
+    			<li><strong>姓名：</strong><input type="text" placeholder="请输入收货人姓名" id="truename" name="truename" value="{cms:$thisOrder.truename}" /></li>
+    			<li><strong>手机：</strong><input type="text" placeholder="请输入联系人手机号" id="tel" name="tel" value="{cms:$thisOrder.tel}" /></li>
+    			<li><strong>地址：</strong><input type="text" placeholder="请输入详细地址" id="address" name="address" value="{cms:$thisOrder.address}" /></li>
     		</ul>
             </div>
     	</div>

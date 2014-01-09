@@ -14,11 +14,11 @@
         <div class="sideBar">
           <div class="catalogList">
             <ul>
-				<li class="subCatalogList"><a href="{Cycms::U('Index/useredit')}">修改密码</a></li>
-				<li class="subCatalogList"><a href="{Cycms::U('Index/index')}">我的公众号</a></li>
-				<li class="subCatalogList"><a href="{Cycms::U('Index/add')}">添加公众号</a></li>
-				<li class="selected"><a href="{Cycms::U('Alipay/index')}">会员充值</a></li>
-				<li class="subCatalogList"><a href="{Cycms::U('Index/pay')}">会员续费</a></li>
+				<li class="subCatalogList"><a href="{cms::U('Index/useredit')}">修改密码</a></li>
+				<li class="subCatalogList"><a href="{cms::U('Index/index')}">我的公众号</a></li>
+				<li class="subCatalogList"><a href="{cms::U('Index/add')}">添加公众号</a></li>
+				<li class="selected"><a href="{cms::U('Alipay/index')}">会员充值</a></li>
+				<li class="subCatalogList"><a href="{cms::U('Index/pay')}">会员续费</a></li>
             </ul>
           </div>
         </div>
@@ -34,7 +34,7 @@ padding-left:10px;
 input{border: 1px solid #DDDDDD;height:30px;width:200px;margin-left:10px;}
 .new-btn-login{
     background-color: transparent;
-    background-image: url("{Cycms::RES}/images/img/new-btn-fixed.png");
+    background-image: url("{cms::RES}/images/img/new-btn-fixed.png");
     border: medium none;
 	border:1px solid red;
 	
@@ -69,7 +69,7 @@ display: inline-block;
 $(function(){
 var price=new Array();
 		<volist id="p" name="group">
-			price[{Cycms:$p.id}]={Cycms:$p.price};
+			price[{cms:$p.id}]={cms:$p.price};
 		</volist>
 	$('#group').change(function(){		
 		
@@ -83,12 +83,12 @@ $('#price').val(price[$('#group').val()]*$('#num').val());
 </script>
 <div class="usercontent">
 <ul>
-<form action="{Cycms::U('Alipay/post')}" method="post">
+<form action="{cms::U('Alipay/post')}" method="post">
 	<li> 
 		<b>充值　选项: </b>
 		<select name="gid" style="margin-left:10px;" id="group">
 			<volist id="group" name="group">
-			<option value="{Cycms:$group.id}" <if condition="$_SESSION['gid'] eq $group['id']" data="{Cycms:$group.price}">selected="selected"</if>>{Cycms:$group.name}</option>
+			<option value="{cms:$group.id}" <if condition="$_SESSION['gid'] eq $group['id']" data="{cms:$group.price}">selected="selected"</if>>{cms:$group.name}</option>
 			</volist>
 		</select>
 		<select name="num" style="margin-left:10px;" id="num">
@@ -106,8 +106,8 @@ $('#price').val(price[$('#group').val()]*$('#num').val());
 			<option value="12">12个月</option>		
 		</select>
     </li>
-	<li> <b>充值用户名: </b><input type="text" name="uname" value="{Cycms:$Think.session.uname}" size="60" > <b>充值帐号,默认即可请勿修改</b></li>
-	<li> <b>充值　金额: </b><input type="text" name="price" value="{Cycms:$user.price}" id="price" size="60"> <b>先择对应的充值选项,价格自动生成</b></li>
+	<li> <b>充值用户名: </b><input type="text" name="uname" value="{cms:$Think.session.uname}" size="60" > <b>充值帐号,默认即可请勿修改</b></li>
+	<li> <b>充值　金额: </b><input type="text" name="price" value="{cms:$user.price}" id="price" size="60"> <b>先择对应的充值选项,价格自动生成</b></li>
 
 	<li><span class="bottonbox"><button class="new-btn-login" type="submit" style="text-align:center;">确 认</button></span></li>
 </form>

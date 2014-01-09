@@ -1,14 +1,14 @@
 <include file="Public:head"/>  
      <div class="content">
 <div class="cLineB">
-<h4 class="left">订单类型信息 ({Cycms:$page}) </h4>
+<h4 class="left">订单类型信息 ({cms:$page}) </h4>
 <div class="searchbar right">
-<a href="{Cycms::U('Host/index',array('token'=>$token))}" class="btnGreen vm">返回</a>
+<a href="{cms::U('Host/index',array('token'=>$token))}" class="btnGreen vm">返回</a>
 </div>
 <div class="clr"></div>
 </div>
 <div class="cLine">
-<div class="pageNavigator left"> <a href="{Cycms::U('Host/list_add',array('token'=>$token,'hid'=>$_GET['id']))}" title="新增订单类型" class="btnGrayS vm bigbtn">新增订单类型 </a> </div>
+<div class="pageNavigator left"> <a href="{cms::U('Host/list_add',array('token'=>$token,'hid'=>$_GET['id']))}" title="新增订单类型" class="btnGrayS vm bigbtn">新增订单类型 </a> </div>
 <div class="clr"></div>
 </div>
 <div class="msgWrap">
@@ -32,13 +32,13 @@
 <volist name="li" id="list"> 
 <tr>
 <td><input type="checkbox" name="del_id[]" value="285" class="checkitem"></td>
-<td>{Cycms:$list.type}</td>
-<td>{Cycms:$list.price}</td>
-<td>{Cycms:$list.yhprice}</td>
-<td>{Cycms:$list.info}</td>
+<td>{cms:$list.type}</td>
+<td>{cms:$list.price}</td>
+<td>{cms:$list.yhprice}</td>
+<td>{cms:$list.info}</td>
  
-<td colspan="10" class="norightborder">  <a  href="{Cycms::U('Host/list_edit',array('id'=>$list['id'],'token'=>$token))}">编辑</a> |
-<a href="javascript:drop_confirm('您确定要删除吗?', '{Cycms::U('Host/list_del',array('id'=>$list['id'],'token'=>$token))}');">删除</a>
+<td colspan="10" class="norightborder">  <a  href="{cms::U('Host/list_edit',array('id'=>$list['id'],'token'=>$token))}">编辑</a> |
+<a href="javascript:drop_confirm('您确定要删除吗?', '{cms::U('Host/list_del',array('id'=>$list['id'],'token'=>$token))}');">删除</a>
 
 </td>
 
@@ -69,7 +69,7 @@ alert('未选中任何文章或回复！')
 </div>
 					<div class="cLine">
 						<div class="pageNavigator right">
-							<div class="pages">{Cycms:$page}</div>
+							<div class="pages">{cms:$page}</div>
 						</div>
 						<div class="clr"></div>
 					</div>

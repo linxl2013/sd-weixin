@@ -1,20 +1,20 @@
 <html>
 <head>
-<title>{Cycms:$set['title']}|在线订购</title>
+<title>{cms:$set['title']}|在线订购</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
-<link href="{Cycms::RES}/css/style/css/hotels.css" rel="stylesheet" type="text/css">
+<link href="{cms::RES}/css/style/css/hotels.css" rel="stylesheet" type="text/css">
 </head>
 
 <body id="" >
 <div class="qiandaobanner"> 
   <if condition="$set['ppicurl'] neq false">
-   <img src="{Cycms:$set['ppicurl']}"  />  
+   <img src="{cms:$set['ppicurl']}"  />  
   <else />
-    <img src="{Cycms::RES}/css/style/images/default.jpg"  />  
+    <img src="{cms::RES}/css/style/images/default.jpg"  />  
  </if>
  </div>
 <div class="cardexplain"> 
@@ -24,18 +24,18 @@
 
 <!--商家房价及类型-->
 <ul class="round">
-<li class="title"><span class="none">{Cycms:$set['title']}</span></li>
+<li class="title"><span class="none">{cms:$set['title']}</span></li>
             
  <volist name="list" id="vo">            
 <li class="dandanb"> <!--订房-->
-<a href="index.php?g=Wap&m=Host&a=lists&token={Cycms:$vo.token}&id={Cycms:$vo.id}&wecha_id={Cycms:$Think.get.wecha_id}&hid={Cycms:$set['id']}"><span>
+<a href="index.php?g=Wap&m=Host&a=lists&token={cms:$vo.token}&id={cms:$vo.id}&wecha_id={cms:$Think.get.wecha_id}&hid={cms:$set['id']}"><span>
 <table class="jiagebiao" width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td><div>{Cycms:$vo.type}</div>
-<div><img src="{Cycms:$vo.picurl}" class="showimg">
-<p>{Cycms:$vo.typeinfo}</p>
-<p>原价：<a class="yuanjia">￥{Cycms:$vo.price}</a></p>
-<p>优惠价：<a class="youhuijia">￥{Cycms:$vo.yhprice}</a></p></td>
+<td><div>{cms:$vo.type}</div>
+<div><img src="{cms:$vo.picurl}" class="showimg">
+<p>{cms:$vo.typeinfo}</p>
+<p>原价：<a class="yuanjia">￥{cms:$vo.price}</a></p>
+<p>优惠价：<a class="youhuijia">￥{cms:$vo.yhprice}</a></p></td>
 </tr>
 </table>
 </span></a>
@@ -48,19 +48,19 @@
 <li class="title"><span class="none">订单说明</span></li>
 <li>
 <div class="text">
-{Cycms:$set['info2']}
+{cms:$set['info2']}
 </div>
 </li>
 </ul>
 
 <!--后台可控制是否显示-->
 <ul class="round">
-<li class="addr"><a href="?g=Wap&m=Company&a=map&token={Cycms:$Think.get.token}&wecha_id={Cycms:$Think.get.wecha_id}"><span>{Cycms:$set['address']}</span></a></li>
-<li class="tel"><a href="tel:{Cycms:$set['tel2']}"><span>{Cycms:$set['tel2']} 电话预订</span></a></li>
+<li class="addr"><a href="?g=Wap&m=Company&a=map&token={cms:$Think.get.token}&wecha_id={cms:$Think.get.wecha_id}"><span>{cms:$set['address']}</span></a></li>
+<li class="tel"><a href="tel:{cms:$set['tel2']}"><span>{cms:$set['tel2']} 电话预订</span></a></li>
 <if condition="$set['tel'] neq false">
-<li class="tel"><a href="tel:{Cycms:$set['tel']}"><span>{Cycms:$set['tel']} 电话预订</span></a></li>
+<li class="tel"><a href="tel:{cms:$set['tel']}"><span>{cms:$set['tel']} 电话预订</span></a></li>
 </if>
-<li class="detail"><a href="index.php?g=Wap&m=Host&a=companyDetail&token={Cycms:$Think.get.token}&wecha_id={Cycms:$Think.get.wecha_id}&hid={Cycms:$Think.get.hid}"><span>查看商家详情</span></a></li>
+<li class="detail"><a href="index.php?g=Wap&m=Host&a=companyDetail&token={cms:$Think.get.token}&wecha_id={cms:$Think.get.wecha_id}&hid={cms:$Think.get.hid}"><span>查看商家详情</span></a></li>
 </ul>
 </div>
 </body>

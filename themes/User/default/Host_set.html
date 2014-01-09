@@ -2,41 +2,41 @@
   <div class="content"> 
    <div class="cLineB"> 
     <h4>商家设置 </h4> 
-    <a href="{Cycms::U('Host/index',array('token'=>$token))}" class="right  btnGreen" style="margin-top:-27px">返回</a> 
+    <a href="{cms::U('Host/index',array('token'=>$token))}" class="right  btnGreen" style="margin-top:-27px">返回</a> 
    </div> 
    <form class="form" method="post" action="" enctype="multipart/form-data"> 
-    <input type="hidden" name="id" value="{Cycms:$set.id}" /> 
+    <input type="hidden" name="id" value="{cms:$set.id}" /> 
      
     <div class="msgWrap bgfc"> 
      <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"> 
       <tbody> 
        <tr> 
         <th width="120"><span class="red">*</span>关键词：</th> 
-        <td><input type="text" name="keyword" value="{Cycms:$set.keyword}" class="px" style="width:400px;" /> <span class="red">只能写一个关键词</span></td> 
+        <td><input type="text" name="keyword" value="{cms:$set.keyword}" class="px" style="width:400px;" /> <span class="red">只能写一个关键词</span></td> 
        </tr> 
        <tr> 
         <th><span class="red">*</span>商家名称：</th> 
-        <td><input type="text" name="title" value="{Cycms:$set.title}" class="px" style="width:400px;" /></td> 
+        <td><input type="text" name="title" value="{cms:$set.title}" class="px" style="width:400px;" /></td> 
        </tr> 
        <tr> 
         <th><span class="red">*</span>商家地址：</th> 
-        <td><input type="text" name="address" value="{Cycms:$set.address}" class="px" style="width:400px;" /></td> 
+        <td><input type="text" name="address" value="{cms:$set.address}" class="px" style="width:400px;" /></td> 
        </tr> 
        <tr> 
         <th><span class="red">*</span>商家电话：</th> 
-        <td><input type="text" name="tel" value="{Cycms:$set.tel}" class="px" style="width:400px;" />电话号码</td> 
+        <td><input type="text" name="tel" value="{cms:$set.tel}" class="px" style="width:400px;" />电话号码</td> 
        </tr> 
        <tr> 
         <th><span class="red">*</span>手机号：</th> 
-        <td><input type="text" name="tel2" value="{Cycms:$set.tel2}" class="px" style="width:400px;" />手机号</td> 
+        <td><input type="text" name="tel2" value="{cms:$set.tel2}" class="px" style="width:400px;" />手机号</td> 
        </tr> 
        <tr> 
         <th><span class="red">*</span>订单封面图片：</th> 
-        <td><input type="text" name="ppicurl" value="{Cycms:$set.ppicurl}" class="px" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{Cycms::U('Upload/index',array('token'=>$token,'n'=>ppicurl))}')" value="点击上传图片"> 填写图片外链地址，推荐大小为720x400</td> 
+        <td><input type="text" name="ppicurl" value="{cms:$set.ppicurl}" class="px" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{cms::U('Upload/index',array('token'=>$token,'n'=>ppicurl))}')" value="点击上传图片"> 填写图片外链地址，推荐大小为720x400</td> 
        </tr> 
        <tr> 
         <th><span class="red">*</span>订单页头部图片：</th> 
-        <td><input type="text" name="headpic" value="<if condition="$set.headpic neq false">{Cycms:$set.headpic}<else/>{Cycms::RES}/images/cart_info/online.jpg</if>" class="px" style="width:400px;" /> 不会自定义请留空:填写图片外链地址，推荐大小为720x125，高度可根据自身需求调整。<br />不填默认本图片: <a target="ss" href="{Cycms::C('site_url')}/themes/User/default/common/images/cart_info/online.jpg">点击查看</a> </td> 
+        <td><input type="text" name="headpic" value="<if condition="$set.headpic neq false">{cms:$set.headpic}<else/>{cms::RES}/images/cart_info/online.jpg</if>" class="px" style="width:400px;" /> 不会自定义请留空:填写图片外链地址，推荐大小为720x125，高度可根据自身需求调整。<br />不填默认本图片: <a target="ss" href="{cms::C('site_url')}/themes/User/default/common/images/cart_info/online.jpg">点击查看</a> </td> 
        </tr> 
         
        <tr> 
@@ -55,10 +55,10 @@
             </thead> 
             <tbody> 
              <tr> 
-              <td width="160"><input type="text" name="name" value="{Cycms:$set.name}" class="px" style="width:160px;" /></td>  
+              <td width="160"><input type="text" name="name" value="{cms:$set.name}" class="px" style="width:160px;" /></td>  
               
-              <td width="200"><input type="text" name="picurl" value="{Cycms:$set.picurl}" class="px" style="width:160px;" /></td> 
-              <td width="200"><input type="text" name="url" value="{Cycms:$set.url}" class="px" style="width:160px;" /></td> 
+              <td width="200"><input type="text" name="picurl" value="{cms:$set.picurl}" class="px" style="width:160px;" /></td> 
+              <td width="200"><input type="text" name="url" value="{cms:$set.url}" class="px" style="width:160px;" /></td> 
                
              </tr> 
             </tbody> 
@@ -71,11 +71,11 @@
        </tr> 
        <tr> 
         <th valign="top"><span class="red">*</span>商家介绍：</th> 
-        <td valign="top"><textarea class="px" id="info" name="info" style="width: 410px; height: 180px;">{Cycms:$set.info}</textarea></td> 
+        <td valign="top"><textarea class="px" id="info" name="info" style="width: 410px; height: 180px;">{cms:$set.info}</textarea></td> 
        </tr> 
        <tr> 
         <th valign="top"><span class="red">*</span>订单说明：</th> 
-        <td valign="top"><textarea class="px" id="info2" name="info2" style="width: 410px; height: 180px; ">{Cycms:$set.info2}</textarea></td> 
+        <td valign="top"><textarea class="px" id="info2" name="info2" style="width: 410px; height: 180px; ">{cms:$set.info2}</textarea></td> 
        </tr> 
       </tbody> 
      </table> 
@@ -84,7 +84,7 @@
        <table class="ListProduct" border="0" cellspacing="0" cellpadding="0" width="100%"> 
        <tbody>
        <tr>         
-        <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>  <td><button type="submit" name="button" class="btnGreen">保存</button> | <a href="{Cycms::U('Host/index',array('token'=>$token))}" class="btnGray vm">取消</a></td> 
+        <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>  <td><button type="submit" name="button" class="btnGreen">保存</button> | <a href="{cms::U('Host/index',array('token'=>$token))}" class="btnGray vm">取消</a></td> 
        </tr> 
       </tbody> 
      </table> 

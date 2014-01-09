@@ -4,9 +4,9 @@
 
  *项目公共配置
 
- *@package Cycms
+ *@package cms
 
- *@author Cycms
+ *@author cms
 
  **/
 
@@ -28,7 +28,7 @@ return array(
 
 	/*定义模版标签*/
 
-	'TMPL_L_DELIM'   		=>'{Cycms:',			//模板引擎普通标签开始标记
+	'TMPL_L_DELIM'   		=>'{cms:',			//模板引擎普通标签开始标记
 
 	'TMPL_R_DELIM'			=>'}',				//模板引擎普通标签结束标记
 

@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> {Cycms::C('site_title')} {Cycms::C('site_name')}</title>
-<meta name="keywords" content="{Cycms::C('keyword')}" />
-<meta name="description" content="{Cycms::C('content')}" />
+<title> {cms::C('site_title')} {cms::C('site_name')}</title>
+<meta name="keywords" content="{cms::C('keyword')}" />
+<meta name="description" content="{cms::C('content')}" />
 <include file="Public:head"/>
 <div class="ptm wp cl" id="ct" style="margin:0 auto;width:960px">
 
@@ -14,15 +14,15 @@
 
 <div id="main_hnav" class="bm_h bbs">
 <span class="y">
-<a class="xi2" href="{Cycms::U('Index/reg')}">现在登录</a>
+<a class="xi2" href="{cms::U('Index/reg')}">现在登录</a>
 </span>
 <h3 class="xs2" id="layer_reginfo_t">
-找回密码-{Cycms::C('sitename')}</h3>
+找回密码-{cms::C('sitename')}</h3>
 </div>
 
 <p id="returnmessage4"></p>
 
-<form action="{Cycms::U('Users/checkpwd')}" enctype="multipart/form-data" id="registerform" name="register" autocomplete="off" method="post">
+<form action="{cms::U('Users/checkpwd')}" enctype="multipart/form-data" id="registerform" name="register" autocomplete="off" method="post">
 <div class="bm_c" id="layer_reg">
 
 <div class="mtw">
@@ -67,7 +67,7 @@
 <span id="reginfo_a_btn">
 <em>&nbsp;</em>
 <button tabindex="1" value="true" name="regsubmit" type="submit" id="registerformsubmit" class="btnGreen"><strong>找回密码</strong></button>
-<a href="{Cycms::U('Index/login')}">登 录</a>　
+<a href="{cms::U('Index/login')}">登 录</a>　
 </span>
 </td>
 <td></td>

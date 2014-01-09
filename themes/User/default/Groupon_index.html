@@ -1,10 +1,10 @@
 <include file="Public:head"/> 
-<link rel="stylesheet" type="text/css" href="{Cycms::RES}/css/cymain.css" />
+<link rel="stylesheet" type="text/css" href="{cms::RES}/css/cymain.css" />
 <script src="/themes/Static/artDialog/jquery.artDialog.js?skin=default"></script>
 <script src="/themes/Static/artDialog/plugins/iframeTools.js"></script>
         <div class="content">
 <div class="cLineB">
-<h4 class="left">团购订单管理（<a href="{Cycms::U('Product/orders',array('token'=>$token,'handled'=>0))}">未处理订单<span style="color:#f00">{Cycms:$unhandledCount}</span>个</a>） ({Cycms:$page}) </h4>
+<h4 class="left">团购订单管理（<a href="{cms::U('Product/orders',array('token'=>$token,'handled'=>0))}">未处理订单<span style="color:#f00">{cms:$unhandledCount}</span>个</a>） ({cms:$page}) </h4>
 <div class="searchbar right">
 <form method="post" action="">
 <input type="text" id="msgSearchInput" class="txt left" placeholder="输入订购人名字搜索" name="searchkey" value="">
@@ -27,7 +27,7 @@ function selectall(name) {
 	}
 }
 </script>
-<if condition="($parentid neq  '0') and ($parentid neq '')"><a href="{Cycms::U('Product/cats',array('token'=>$token,'parentid'=>$parentCat['parentid']))}" class="btnGreen" style="margin-top:-27px">返回上</a></if>
+<if condition="($parentid neq  '0') and ($parentid neq '')"><a href="{cms::U('Product/cats',array('token'=>$token,'parentid'=>$parentCat['parentid']))}" class="btnGreen" style="margin-top:-27px">返回上</a></if>
 </form>
 </div>
 <div class="clr"></div>
@@ -36,16 +36,16 @@ function selectall(name) {
 <!--tab start-->
 <div class="tab">
 <ul>
-<li class="current tabli" id="tab0"><a href="{Cycms::U('Groupon/index',array('token'=>$token))}">团购订单管理</a></li>
-<li class="tabli" id="tab2"><a href="{Cycms::U('Groupon/products',array('token'=>$token))}">团购管理</a></li>
-<li class="tabli" id="tab2"><a href="{Cycms::U('Reply_info/set',array('token'=>$token,'infotype'=>'Groupon'))}">团购回复配置</a></li>
+<li class="current tabli" id="tab0"><a href="{cms::U('Groupon/index',array('token'=>$token))}">团购订单管理</a></li>
+<li class="tabli" id="tab2"><a href="{cms::U('Groupon/products',array('token'=>$token))}">团购管理</a></li>
+<li class="tabli" id="tab2"><a href="{cms::U('Reply_info/set',array('token'=>$token,'infotype'=>'Groupon'))}">团购回复配置</a></li>
 </ul>
 </div>
 <!--tab end-->
 <div class="msgWrap">
 <form method="post" action="" id="info">
 <div class="cLine">
-<div class="pageNavigator left"> <a href="###" onclick="$('#info').submit()" title="" class="btnGrayS vm bigbtn"><img src="{Cycms::RES}/images/product/arrow_switch.png" class="vm">处理订单</a></div>
+<div class="pageNavigator left"> <a href="###" onclick="$('#info').submit()" title="" class="btnGrayS vm bigbtn"><img src="{cms::RES}/images/product/arrow_switch.png" class="vm">处理订单</a></div>
 <div class="clr"></div>
 </div>
 
@@ -68,31 +68,31 @@ function selectall(name) {
 <tr></tr>
 <volist name="orders" id="o"> 
 <tr>
-<td><input type="checkbox" value="{Cycms:$o.id}" class="cbitem" name="id_{Cycms:$i}"></td>
-<td>{Cycms:$o.truename} <if condition="$isDining eq 1"><span style="color:#f60">[<if condition="$o.diningtype eq 1">点餐<elseif condition="$o.diningtype eq 2" />外卖<elseif condition="$o.diningtype eq 3" />预定<else /></if>]</span></if></td>
-<td>{Cycms:$o.tel}</td>
-<td>{Cycms:$o.total}</td>
-<td>{Cycms:$o.price}</td>
+<td><input type="checkbox" value="{cms:$o.id}" class="cbitem" name="id_{cms:$i}"></td>
+<td>{cms:$o.truename} <if condition="$isDining eq 1"><span style="color:#f60">[<if condition="$o.diningtype eq 1">点餐<elseif condition="$o.diningtype eq 2" />外卖<elseif condition="$o.diningtype eq 3" />预定<else /></if>]</span></if></td>
+<td>{cms:$o.tel}</td>
+<td>{cms:$o.total}</td>
+<td>{cms:$o.price}</td>
 <td><if condition="$o.handled eq 1"><span style="color:green">已处理</span><else/><span style="color:red">未处理</span></if></td>
-<td>{Cycms:$o.time|date="Y-m-d H:i:s",###}</td> 
-<td class="norightborder"><a href="###" onclick="showIntroDetail({Cycms:$o.id})">详细</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{Cycms::U('Product/deleteOrder',array('token'=>$token,'id'=>$o['id'],'dining'=>$isDining))}');">删除</a></td>
+<td>{cms:$o.time|date="Y-m-d H:i:s",###}</td> 
+<td class="norightborder"><a href="###" onclick="showIntroDetail({cms:$o.id})">详细</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{cms::U('Product/deleteOrder',array('token'=>$token,'id'=>$o['id'],'dining'=>$isDining))}');">删除</a></td>
 </tr>
 </volist>
 </tbody>
 </table>
-<input type="hidden" name="token" value="{Cycms:$_GET['token']}" />
+<input type="hidden" name="token" value="{cms:$_GET['token']}" />
 
 </form>
 
    <script>
 function showIntroDetail(id){
-	art.dialog.open('{Cycms::U('Product/orderInfo',array('token'=>$token,'dining'=>$isDining))}&id='+id,{lock:false,title:'订单详情',width:700,height:420,yesText:'关闭',background: '#000',opacity: 0.87});
+	art.dialog.open('{cms::U('Product/orderInfo',array('token'=>$token,'dining'=>$isDining))}&id='+id,{lock:false,title:'订单详情',width:700,height:420,yesText:'关闭',background: '#000',opacity: 0.87});
 }
 </script>
 </div>
 					<div class="cLine">
 						<div class="pageNavigator right">
-							<div class="pages">{Cycms:$page}</div>
+							<div class="pages">{cms:$page}</div>
 						</div>
 						<div class="clr"></div>
 					</div>

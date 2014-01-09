@@ -5,7 +5,7 @@
  * @author 朗朗
  * @from 开源吧
  */
-class Cycms_Page {
+class cms_Page {
     private $each_disNums; //每页显示的条目数
     private $nums; //总条目数
     private $current_page; //当前被选中的页
@@ -28,7 +28,7 @@ class Cycms_Page {
      *    当@subPage_type=2的时候为经典分页样式
      *     example：   当前第1/453页 [首页] [上页] 1 2 3 4 5 6 7 8 9 10 [下页] [尾页]
      */
-    function Cycms_Page($each_disNums, $nums, $current_page, $sub_pages, $subPage_link) {
+    function cms_Page($each_disNums, $nums, $current_page, $sub_pages, $subPage_link) {
 		
         $this->each_disNums = intval($each_disNums);
         $this->nums = intval($nums);
@@ -46,7 +46,7 @@ class Cycms_Page {
      */
     function __construct($each_disNums, $nums, $current_page, $sub_pages, $subPage_link) {
 	
-        $this->Cycms_Page($each_disNums, $nums, $current_page, $sub_pages, $subPage_link);
+        $this->cms_Page($each_disNums, $nums, $current_page, $sub_pages, $subPage_link);
     }
     /*
      __destruct析构函数，当类不在使用的时候调用，该函数用来释放资源。

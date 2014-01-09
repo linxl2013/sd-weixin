@@ -1,7 +1,7 @@
 <include file="Public:head"/>  
         <div class="content">
           <div class="cLineB">
-              <h4 class="left">幸运大转盘活动信息 ({Cycms:$count}) 条<span class="FAQ">你本月有 {Cycms:$group.activitynum} 次机会可免收活动创建费，已经使用了 {Cycms:$activitynum} 次机会!</span></h4>
+              <h4 class="left">幸运大转盘活动信息 ({cms:$count}) 条<span class="FAQ">你本月有 {cms:$group.activitynum} 次机会可免收活动创建费，已经使用了 {cms:$activitynum} 次机会!</span></h4>
                   <div class="searchbar right">  <form method="get"  action="index.php"  >
                   <input type="text" id="msgSearchInput" class="txt left" placeholder="输入关键词搜索"  name="keyz" value="">
                   <input type="hidden" name="ac" value="activity-lottery-list"  />
@@ -15,7 +15,7 @@
           </div>
           <div class="cLine">
             <div class="pageNavigator left">
-			<a href='/index.php?g=User&m=Lottery&a=add' title='新增幸运大转盘活动' class='btnGrayS vm bigbtn'><img src="{Cycms::RES}/images/img/activity-lottery.png" class="vm" />新增幸运大转盘活动</a>
+			<a href='/index.php?g=User&m=Lottery&a=add' title='新增幸运大转盘活动' class='btnGrayS vm bigbtn'><img src="{cms::RES}/images/img/activity-lottery.png" class="vm" />新增幸运大转盘活动</a>
               
             </div>
           
@@ -44,27 +44,27 @@
                   <volist id="list" name="list">
                 <TR>
                   <TD><input type="checkbox" name='del_id[]' value="842" class="checkitem"></TD>
-                  <TD>{Cycms:$list.title}</TD>
-                  <TD>{Cycms:$list.keyword}</TD> 
-				  <TD>{Cycms:$list.joinnum}</TD>
-                  <TD>{Cycms:$list.click}</TD>                  
-                  <TD>{Cycms:$list.statdate|date='Y-m-d',###}<br />{Cycms:$list.enddate|date='Y-m-d',###}</TD>
+                  <TD>{cms:$list.title}</TD>
+                  <TD>{cms:$list.keyword}</TD> 
+				  <TD>{cms:$list.joinnum}</TD>
+                  <TD>{cms:$list.click}</TD>                  
+                  <TD>{cms:$list.statdate|date='Y-m-d',###}<br />{cms:$list.enddate|date='Y-m-d',###}</TD>
                   <TD>
 				  <if condition="$list['status'] eq 0">未开始<elseif condition="$list['status'] eq 2"/>已经结束<else/>已经开始</if>
 				  
 				 </TD>
-                  <TD>大转盘 {Cycms:$list.id}</TD>
+                  <TD>大转盘 {cms:$list.id}</TD>
                    <TD class="norightborder">
-				   <a href="index.php?g=User&m=Lottery&a=sn&id={Cycms:$list.id}">SN码管理</a> 
-				   <a href="index.php?g=User&m=Lottery&a=edit&id={Cycms:$list.id}">编辑</a>  
+				   <a href="index.php?g=User&m=Lottery&a=sn&id={cms:$list.id}">SN码管理</a> 
+				   <a href="index.php?g=User&m=Lottery&a=edit&id={cms:$list.id}">编辑</a>  
 				   <a href="
 				   <if condition="$list['status'] lt 0">				   
-				   javascript:drop_confirm('你确定要结束活动吗，结束后不可再开启本活动!', 'index.php?g=User&m=Lottery&a=setdes&id={Cycms:$list.id}');<else/>index.php?g=User&m=Lottery&a=setinc&id={Cycms:$list.id}   
+				   javascript:drop_confirm('你确定要结束活动吗，结束后不可再开启本活动!', 'index.php?g=User&m=Lottery&a=setdes&id={cms:$list.id}');<else/>index.php?g=User&m=Lottery&a=setinc&id={cms:$list.id}   
 				   </if>">
 				   <if condition="$list['status'] eq 0">开始<elseif condition="$list['status'] eq 2"/>打开<else/>结束</if>				   
 				   </a>
 				  
-				   <a href="index.php?g=User&m=Lottery&a=del&id={Cycms:$list.id}">删除</a></TD>
+				   <a href="index.php?g=User&m=Lottery&a=del&id={cms:$list.id}">删除</a></TD>
                 </TR>
 				</volist>
                          

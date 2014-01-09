@@ -1,13 +1,13 @@
 <include file="Product:header"/>
 <div class="main">
 	<div class="p_content">
-		<h1>{Cycms:$product.name}</h1>
+		<h1>{cms:$product.name}</h1>
 		<div class="p_con">
-			<img src="{Cycms:$product.logourl}" alt="{Cycms:$product.name}"/>
+			<img src="{cms:$product.logourl}" alt="{cms:$product.name}"/>
             <br />
-{Cycms:$product.intro}</div>
+{cms:$product.intro}</div>
 		<div class="p_mod p_seller_info p_tips ts2">
-			<a href="{Cycms::U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}">
+			<a href="{cms::U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}">
 				查看商品详情
 				<span class="gt"></span>
 			</a>
@@ -15,9 +15,9 @@
 	</div>
 	<div class="p_buy clearfix fixed_b">
 		<span class="p_price">
-			￥{Cycms:$product.price}
+			￥{cms:$product.price}
 		</span>
-		<a href="{Cycms::U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}" class="p_btn_buy">
+		<a href="{cms::U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}" class="p_btn_buy">
 			<span class="ts1">去购买</span>
 		</a>
 	</div>

@@ -2,9 +2,9 @@
 <div class="content">
 	<div class="usercontent">
 		<ul>
-			<li class="addli"><a class="addwx" title="添加微信公众号" onclick="location.href='{Cycms::U('Index/add')}';">添加微信公众号</a></li>
+			<li class="addli"><a class="addwx" title="添加微信公众号" onclick="location.href='{cms::U('Index/add')}';">添加微信公众号</a></li>
 			<li><a href="index.php?g=User&m=Alipay&a=index" title="支付宝在线充值" class="goldbuy">支付宝在线充值</a></li>
-<li><div class="qqqun"><div class="qt">{Cycms::C('site_qq')} </div><div class="qt2">官方企业QQ号</div></div></li>
+<li><div class="qqqun"><div class="qt">{cms::C('site_qq')} </div><div class="qt2">官方企业QQ号</div></div></li>
 		</ul>
 		<div class="clr"></div>
 	</div>
@@ -24,15 +24,15 @@
                 <tr></tr>                
                  <volist name="info" id="vo"> 
 					<tr>
-					  <td><p><a href="{Cycms::U('Function/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" title="点击进入功能管理"><img src="{Cycms:$vo.headerpic}" width="40" height="40"></a></p><p>{Cycms:$vo.wxname}</p></td>
+					  <td><p><a href="{cms::U('Function/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" title="点击进入功能管理"><img src="{cms:$vo.headerpic}" width="40" height="40"></a></p><p>{cms:$vo.wxname}</p></td>
 					  <td align="center"><php>if($_SESSION['gid']>1){echo $_SESSION['gid']-1;}else{echo 0;}</php></td>
-					  <td><p>创建时间:{Cycms:$vo.createtime|date="Y-m-d",###}</p><p>到期时间:{Cycms:$viptime|date="Y-m-d",###}</p><p><a   href="{Cycms::U('Alipay/index')}" id="smemberss" class="green"><em>升降级vip续费</em></a></p></Td>
+					  <td><p>创建时间:{cms:$vo.createtime|date="Y-m-d",###}</p><p>到期时间:{cms:$viptime|date="Y-m-d",###}</p><p><a   href="{cms::U('Alipay/index')}" id="smemberss" class="green"><em>升降级vip续费</em></a></p></Td>
 					  <td><p>图文：<php>echo $_SESSION['diynum'].'/'.$group[$_SESSION['gid']]['did'];</php></p></td>
 					   <td><p>总请求数:<php>echo $_SESSION['connectnum']</php></p><p> 本月请求数:<php>echo $group[$_SESSION['gid']]['cid'];</php></p></td>
 					  
-					  <td class="norightborder">　<a href="{Cycms::U('Index/edit',array('id'=>$vo['id']))}">编辑</a>　<a  href="{Cycms::U('Index/del',array('id'=>$vo['id']))};">删除</a>　
-					  <a href="{Cycms::U('Function/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >功能管理</a>
-					  <a href="{Cycms::U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a>
+					  <td class="norightborder">　<a href="{cms::U('Index/edit',array('id'=>$vo['id']))}">编辑</a>　<a  href="{cms::U('Index/del',array('id'=>$vo['id']))};">删除</a>　
+					  <a href="{cms::U('Function/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >功能管理</a>
+					  <a href="{cms::U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a>
 					  </td>
 					</tr>
                   </volist>

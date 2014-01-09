@@ -1,10 +1,10 @@
 <include file="Public:head"/>  
-<link rel="stylesheet" href="{Cycms::RES}/css/diymen/tipswindown.css" type="text/css" media="all" />
-<script type="text/javascript" src="{Cycms::RES}/css/diymen/tipswindown.js"></script> 
+<link rel="stylesheet" href="{cms::RES}/css/diymen/tipswindown.css" type="text/css" media="all" />
+<script type="text/javascript" src="{cms::RES}/css/diymen/tipswindown.js"></script> 
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#iframe1").click(function(){
-		tipsWindown("添加菜单","iframe:{Cycms::C('site_url')}{Cycms::U('Diymen/class_add')}","460","600","true","","true","leotheme");
+		tipsWindown("添加菜单","iframe:{cms::C('site_url')}{cms::U('Diymen/class_add')}","460","600","true","","true","leotheme");
 	});
 });
 </script>
@@ -15,8 +15,8 @@ $(document).ready(function() {
 </div>
  <div class="cLineD">
  	<form enctype="multipart/form-data" action="" method="post"> 
-    AppId:<input type="text" size="20" tabindex="1" class="px" value="{Cycms:$diymen.appid}" id="appid" name="appid">　 
-	AppSecret: <input type="text" size="20" tabindex="1" class="px" value="{Cycms:$diymen.appsecret}" id="appsecret" name="appsecret">
+    AppId:<input type="text" size="20" tabindex="1" class="px" value="{cms:$diymen.appid}" id="appid" name="appid">　 
+	AppSecret: <input type="text" size="20" tabindex="1" class="px" value="{cms:$diymen.appsecret}" id="appsecret" name="appsecret">
 	<button class=" btnGrayS vm" value="true" name="appidsubmit" type="submit"><strong>保存</strong></button>
 	<br><span style="color:red">通过认证服务号才能得到这2个值!</span>
 </form>
@@ -41,51 +41,51 @@ $(document).ready(function() {
   	<volist id="class" name="class">
 	<tr class="hover">
         <td class="td25">
-			<span>{Cycms:$class.sort}</span>
+			<span>{cms:$class.sort}</span>
 		</td>
 		<td>
 			<span><if condition="$class['type'] eq 'click'">关键词</if><if condition="$class['type'] eq 'view'">超链接</if></span>
 		</td>
         <td>
           <div>
-			<span>{Cycms:$class.title}</span>
+			<span>{cms:$class.title}</span>
           </div>
         </td>
-        <td><span>{Cycms:$class.keyword}</span></td>
-        <td><span><if condition="$class['url'] eq false">无链接地址<else/>{Cycms:$class.url}</if></span></td>
+        <td><span>{cms:$class.keyword}</span></td>
+        <td><span><if condition="$class['url'] eq false">无链接地址<else/>{cms:$class.url}</if></span></td>
         <td>
-			<a class="ajax btnGreen  cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{Cycms::C('site_url')}{Cycms::U('Diymen/class_edit',array('id'=>$class['id']))}","460","600","true","","true","leotheme");' title="修改主菜单">修改</a>
-			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{Cycms::C('site_url')}{Cycms::U('Diymen/class_del',array('id'=>$class['id']))}');">删除</a>
+			<a class="ajax btnGreen  cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{cms::C('site_url')}{cms::U('Diymen/class_edit',array('id'=>$class['id']))}","460","600","true","","true","leotheme");' title="修改主菜单">修改</a>
+			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{cms::C('site_url')}{cms::U('Diymen/class_del',array('id'=>$class['id']))}');">删除</a>
 		</td>				
       </tr>
 	  <volist id="class1" name="class['class']">
 	  <tr class="td29">
 			<td class="td25" colspan="1">
-				<span>{Cycms:$class1.sort}</span>
+				<span>{cms:$class1.sort}</span>
 			</td>
 			<td>
 				<span><if condition="$class1['type'] eq 'click'">关键词</if><if condition="$class1['type'] eq 'view'">超链接</if></span>
 			</td>
 			<td colspan="1">
 			  <div class="board">
-				<span>{Cycms:$class1.title}</span>
+				<span>{cms:$class1.title}</span>
 			  </div>
 			</td>
 			
 			<td colspan="1">
-				<span>{Cycms:$class1.keyword}</span>
+				<span>{cms:$class1.keyword}</span>
 			</td>
-			 <td><span><if condition="$class1['url'] eq false">无链接地址<else/>{Cycms:$class1.url}</if></span></td>
+			 <td><span><if condition="$class1['url'] eq false">无链接地址<else/>{cms:$class1.url}</if></span></td>
 			<td colspan="1">
-			<a class="ajax btnGreen cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{Cycms::C('site_url')}/{Cycms::U('Diymen/class_edit',array('id'=>$class1['id']))}","460","600","true","","true","leotheme");' title="修改主菜单">修改</a>
-			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{Cycms::C('site_url')}/{Cycms::U('Diymen/class_del',array('id'=>$class1['id']))}');">删除</a></td>				
+			<a class="ajax btnGreen cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{cms::C('site_url')}/{cms::U('Diymen/class_edit',array('id'=>$class1['id']))}","460","600","true","","true","leotheme");' title="修改主菜单">修改</a>
+			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{cms::C('site_url')}/{cms::U('Diymen/class_del',array('id'=>$class1['id']))}');">删除</a></td>				
 	 </tr>	
 	</volist>
 	</volist>
 	<tr class="hover">
         <td class="td25" colspan="6">
 		<if condition="$class neq false">
-		<a class="btnGreen " onclick="drop_confirm('自定义菜单最多勾选3个，每个菜单的子菜单最多5个，请确认!', '{Cycms::U('Diymen/class_send')}');" title="">生成自定义菜单</a>
+		<a class="btnGreen " onclick="drop_confirm('自定义菜单最多勾选3个，每个菜单的子菜单最多5个，请确认!', '{cms::U('Diymen/class_send')}');" title="">生成自定义菜单</a>
 		</if>
 		<span style="float:left;" id="cdul">
 		<style>

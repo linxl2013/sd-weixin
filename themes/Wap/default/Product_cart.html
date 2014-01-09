@@ -7,29 +7,29 @@
                 <volist name="products" id="p">
               <div class="car_list clearfix">
                 <div class="car_content clearfix">
-                  <h3><a href="{Cycms::U('Product/product',array('token'=>$_GET['token'],'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">{Cycms:$p.name}</a></h3>
-                     <a href="{Cycms::U('Product/product',array('token'=>$_GET['token'],'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">
-                      <img src="{Cycms:$p.logourl}" />
+                  <h3><a href="{cms::U('Product/product',array('token'=>$_GET['token'],'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">{cms:$p.name}</a></h3>
+                     <a href="{cms::U('Product/product',array('token'=>$_GET['token'],'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">
+                      <img src="{cms:$p.logourl}" />
                      </a>
                      <div class="car_property">
-                        <span class="price_now">单价：<font>￥{Cycms:$p.price}</font></span>
-                                                <div class="o_num_input clearfix" id="{Cycms:$p.id}">
-                            <a class="minus ts2" href="javascript:;" onclick="plus_minus({Cycms:$p.id}, -1,{Cycms:$p.price})">-</a>
-                            <input type="number" min="1" lastnum="1" value="{Cycms:$p.count}" id="qty{Cycms:$p.id}" class="qty" onblur="full_update({Cycms:$p.id},{Cycms:$p.price})" />
-                            <a class="plus ts2 on" href="javascript:;" onclick="plus_minus({Cycms:$p.id},1,{Cycms:$p.price})">+</a>
+                        <span class="price_now">单价：<font>￥{cms:$p.price}</font></span>
+                                                <div class="o_num_input clearfix" id="{cms:$p.id}">
+                            <a class="minus ts2" href="javascript:;" onclick="plus_minus({cms:$p.id}, -1,{cms:$p.price})">-</a>
+                            <input type="number" min="1" lastnum="1" value="{cms:$p.count}" id="qty{cms:$p.id}" class="qty" onblur="full_update({cms:$p.id},{cms:$p.price})" />
+                            <a class="plus ts2 on" href="javascript:;" onclick="plus_minus({cms:$p.id},1,{cms:$p.price})">+</a>
                         </div>
-                        <a class="u_order_return delete" href="{Cycms::U('Product/deleteCart',array('token'=>$_GET['token'],'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">删除商品</a>                     
+                        <a class="u_order_return delete" href="{cms::U('Product/deleteCart',array('token'=>$_GET['token'],'id'=>$p['id'],'wecha_id'=>$_GET['wecha_id']))}">删除商品</a>                     
                      </div>
                 </div>
               </div>
                  </volist>
-                            <p><span class="price_now" id="total_fee">总价格：<font>￥{Cycms:$totalFee}</font></span></p>
+                            <p><span class="price_now" id="total_fee">总价格：<font>￥{cms:$totalFee}</font></span></p>
             </div>            
     	</div>
             	<div class="o_btn clearfix">
             	<if condition="$totalProductCount neq 0">
     		<input type="button" class="o_btn_back ts1" onclick="history.go(-1);" value="继续购物"/>
-    		<input type="button" class="o_btn_submit ts1" onclick="location.href='{Cycms::U('Product/orderCart',array('token'=>$_GET['token'],'cartIsDining'=>$cartIsDining,'wecha_id'=>$_GET['wecha_id']))}'" value="去结算" />
+    		<input type="button" class="o_btn_submit ts1" onclick="location.href='{cms::U('Product/orderCart',array('token'=>$_GET['token'],'cartIsDining'=>$cartIsDining,'wecha_id'=>$_GET['wecha_id']))}'" value="去结算" />
     		</if>
     	</div>
  
@@ -62,7 +62,7 @@ function plus_minus(rowid, number,price) {
 //更新购物车
 function update_cart(rowid, num,price) {
 	$.ajax({
-		url: '{Cycms::U('Product/ajaxUpdateCart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}&id='+rowid+'&count='+num+'&price='+price,
+		url: '{cms::U('Product/ajaxUpdateCart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}&id='+rowid+'&count='+num+'&price='+price,
 		success: function( data ) {
 			if(data){
 				var datas=data.split('|');
@@ -76,7 +76,7 @@ function update_cart(rowid, num,price) {
 //点击加入购物车
     function add_cart(id,price,count) {
     	$.ajax({
-    		url: "{Cycms::U('Product/addProductToCart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"+'&id='+id+'&price='+price+'&count='+count,
+    		url: "{cms::U('Product/addProductToCart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}"+'&id='+id+'&price='+price+'&count='+count,
     		success: function( data ) {
     			if(data){
     				var datas=data.split('|');
