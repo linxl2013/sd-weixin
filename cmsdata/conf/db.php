@@ -6,6 +6,6 @@ return array (
   'DB_NAME' => 'web_cms',
   'DB_USER' => 'root',
   'DB_PWD' => '2468',
-  'DB_PREFIX' => 'cms_',
+  'DB_PREFIX' => 'Cycms_',
 );
 ?>
